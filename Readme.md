@@ -1,7 +1,7 @@
 # Личный проект «Глейси»
 
 * Студент: [Вячеслав Акулов](https://up.htmlacademy.ru/htmlcss/23/user/909803).
-* Наставник: `Неизвестно`.
+* Наставник: [Георгий Гусаков](https://htmlacademy.ru/profile/georgegus27).
 
 ---
 
