@@ -23,9 +23,27 @@
           <li><a href="about-us.html">О Компании</a></li>
         </ul>
         <div class="user-menu">
-          <a class="user-menu__search" href="#">Поиск</a>
-          <a class="user-menu__login user-menu__login--not-logged " href="#">Вход</a>
-          <a class="user-menu__basket user-menu__basket--empty" href="#">Корзина</a>
+          <div class="user-menu__search">
+            <a class="search-button" href="#">Поиск</a>
+            <div class="search-form dropdown">
+              <h2 class="visually-hidden">Поиск по сайту</h2>
+              <!-- Здесь будет форма поиска -->
+            </div>
+          </div>
+          <div class="user-menu__login">
+            <a class="login-button login-button--not-logged" href="#">Вход</a>
+            <section class="login-form dropdown">
+              <h2 class="visually-hidden">Вход в личный кабинет</h2>
+              <!-- Здесь будет форма авторизации -->
+            </section>
+          </div>
+          <div class="user-menu__basket">
+            <a class="basket-button basket-button--empty" href="#">Корзина</a>
+            <section class="basket-form dropdown">
+              <h2 class="visually-hidden">Корзина</h2>
+              <!-- Здесь будет форма корзины -->
+            </section>
+          </div>
         </div>
       </nav>
       <p class="schedule">С 10 до 20, ежедневно</p>
@@ -105,21 +123,6 @@
       </section>
 
       <!-- Здесь будет блок инетрактивной карты -->
-
-      <div class="search-form">
-        <h2 class="visually-hidden">Поиск по сайту</h2>
-        <!-- Здесь будет форма поиска -->
-      </div>
-
-      <section class="login-form dropdown">
-        <h2 class="visually-hidden">Вход в личный кабинет</h2>
-        <!-- Здесь будет форма авторизации -->
-      </section>
-
-      <section class="basket-form dropdown">
-        <h2 class="visually-hidden">Корзина</h2>
-        <!-- Здесь будет форма корзины -->
-      </section>
 
       <section class="modal modal-feedback">
         <h2 class="visually-hidden">Обратная связь</h2>
