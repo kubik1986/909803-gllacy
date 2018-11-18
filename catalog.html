@@ -6,45 +6,45 @@
   </head>
   <body>
     <header class="main-header">
-      <nav class="main-navigation">
-        <a href="index.html"><img src="img/logo.svg" alt="Логотип сайта магазина мороженого «Глэйси»" width="154" height="64"></a>
-        <ul class="site-menu">
-          <li>
-            <a  class="menu--current" href="catalog.html">Каталог</a>
-            <ul class="site-menu__submenu dropdown">
-              <li><a href="#">Новинки</a></li>
-              <li><a  class="menu--current" href="catalog.html">Сливочное</a></li>
-              <li><a href="#">Щербеты</a></li>
-              <li><a href="#">Фруктовый лед</a></li>
-              <li><a href="#">Мелорин</a></li>
+      <nav class="main-menu">
+        <a  class="main-header__logo" href="index.html"><img src="img/logo.svg" alt="Логотип сайта магазина мороженого «Глэйси»" width="154" height="64"></a>
+        <ul class="main-menu__list">
+          <li class="main-menu__item">
+            <a class="main-menu__link main-menu__link--current" href="catalog.html">Каталог</a>
+            <ul class="submenu dropdown">
+              <li class="submenu__item"><a class="submenu__link" href="#">Новинки</a></li>
+              <li class="submenu__item"><a class="submenu__link submenu__link--current" href="catalog.html">Сливочное</a></li>
+              <li class="submenu__item"><a class="submenu__link" href="#">Щербеты</a></li>
+              <li class="submenu__item"><a class="submenu__link" href="#">Фруктовый лед</a></li>
+              <li class="submenu__item"><a class="submenu__link" href="#">Мелорин</a></li>
             </ul>
           </li>
-          <li><a href="shipping-and-payment.html">Доставка и оплата</a></li>
-          <li><a href="about-us.html">О Компании</a></li>
+          <li class="main-menu__item"><a class="main-menu__link" href="shipping-and-payment.html">Доставка и оплата</a></li>
+          <li class="main-menu__item"><a class="main-menu__link" href="about-us.html">О Компании</a></li>
         </ul>
         <div class="user-menu">
-          <div class="user-menu__search">
-            <a class="search-button" href="#">Поиск</a>
+          <div class="user-menu__item">
+            <a class="user-menu__button" href="#">Поиск</a>
             <div class="search-form dropdown">
               <!-- Здесь будет форма поиска -->
             </div>
           </div>
-          <div class="user-menu__login">
-            <a class="login-button" href="#">Вход</a>
+          <div class="user-menu__item">
+            <a class="user-menu__button" href="#">Вход в личный кабинет</a>
             <div class="login-form dropdown">
               <!-- Здесь будет форма авторизации -->
             </div>
           </div>
-          <div class="user-menu__basket">
-            <a class="basket-button" href="#">Корзина</a>
+          <div class="user-menu__item">
+            <a class="user-menu__button" href="#">Корзина</a>
             <div class="basket-form dropdown">
               <!-- Здесь будет форма корзины -->
             </div>
           </div>
         </div>
       </nav>
-      <p class="schedule">С 10 до 20, ежедневно</p>
-      <p class="phone-number">8 812 450-25-25</p>
+      <p class="main-header__schedule">С 10 до 20, ежедневно</p>
+      <p class="main-header__phone-number">8 812 450-25-25</p>
     </header>
 
     <main>
