@@ -17,6 +17,12 @@
       </svg>
     </div>
 
+    <!-- Радио-кнопки переключения слайдов -->
+      <input class="slider__radio-button" type="radio" id="slide-1__radio" name="slide" checked>
+      <input class="slider__radio-button" type="radio" id="slide-2__radio" name="slide">
+      <input class="slider__radio-button" type="radio" id="slide-3__radio" name="slide">
+    <!-- / -->
+
     <header class="main-header">
       <nav class="main-menu">
         <a class="main-header__logo"><img src="img/logo.svg" alt="Логотип сайта магазина мороженого «Глэйси»" width="154" height="64"></a>
@@ -78,7 +84,28 @@
       <h1 class="visually-hidden">Глэйси - магазин мороженого собственного производства</h1>
       <section class="slider">
         <h2 class="visually-hidden">Новинки месяца</h2>
-        <!-- Здесь будет слайдер -->
+        <ul class="slider__list">
+          <li class="slider__item">
+            <h3 class="slider__title">Крем-брюле и пломбир с малиновым джемом</h3>
+            <img src="img/slide-1.png" alt="Крем-брюле и пломбир с малиновым джемом" width="1045" height="881">
+            <a href="#" class="button slider__button">Давайте оба!</a>
+          </li>
+          <li class="slider__item">
+            <h3 class="slider__title">Шоколадный пломбир и лимонный сорбет</h3>
+            <img src="img/slide-2.png" alt="Шоколадный пломбир и лимонный сорбет" width="1065" height="859">
+            <a href="#" class="button slider__button">Давайте оба!</a>
+          </li>
+          <li class="slider__item">
+            <h3 class="slider__title">Пломбир с помадкой и клубничный щербет</h3>
+            <img src="img/slide-3.png" alt="Пломбир с помадкой и клубничный щербет" width="1079" height="854">
+            <a href="#" class="button slider__button">Давайте оба!</a>
+          </li>
+        </ul>
+        <div class="slider__controls">
+          <label class="slider__toggle" for="slide-1__radio">Слайд 1</label>
+          <label class="slider__toggle" for="slide-2__radio">Слайд 2</label>
+          <label class="slider__toggle" for="slide-3__radio">Слайд 3</label>
+        </div>
       </section>
 
       <section class="promo">
@@ -147,8 +174,21 @@
         <!-- Здесь будет форма подписки -->
       </section>
 
-      <!-- Здесь будет блок инетрактивной карты -->
-
+      <section class="contacts">
+        <h2 class="visually-hidden">Как нас найти</h2>
+        <iframe class="contacts__map"></iframe>
+        <div class="contacts__legend">
+          <p class="contacts__section">Адрес главного офиса<br>
+            и офлайн-магазина:
+            <span class="contacts__adress">ул. Большая Конюшенная 19/8, Санкт-Петербург</span>
+          </p>
+          <p class="contacts__section">Для заказов по телефону:
+            <span class="contacts__phone">8 812 450-25-25</span>
+            <span class="contacts__schedule">(с 10 до 20 ежедневно)</span>
+          </p>
+          <a class="button contacts__button" href="#">Форма обратной связи</a>
+        </div>
+      </section>
     </main>
 
     <footer class="main-footer">
