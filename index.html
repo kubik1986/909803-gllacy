@@ -17,12 +17,6 @@
       </svg>
     </div>
 
-    <!-- Радио-кнопки переключения слайдов -->
-      <input class="slider__radio-button" type="radio" id="slide-1__radio" name="slide" checked>
-      <input class="slider__radio-button" type="radio" id="slide-2__radio" name="slide">
-      <input class="slider__radio-button" type="radio" id="slide-3__radio" name="slide">
-    <!-- / -->
-
     <header class="main-header">
       <nav class="main-menu">
         <a class="main-header__logo"><img src="img/logo.svg" alt="Логотип сайта магазина мороженого «Глэйси»" width="154" height="64"></a>
@@ -83,7 +77,12 @@
     <main>
       <h1 class="visually-hidden">Глэйси - магазин мороженого собственного производства</h1>
       <section class="slider">
-        <h2 class="visually-hidden">Новинки месяца</h2>
+        <h2 class="visually-hidden">Новинки в нашем каталоге</h2>
+        <div class="slider__controls">
+          <button class="slider__toggle slider__toggle-1">Слайд 1</button>
+          <button class="slider__toggle slider__toggle-1">Слайд 2</button>
+          <button class="slider__toggle slider__toggle-1">Слайд 3</button>
+        </div>
         <ul class="slider__list">
           <li class="slider__item slider__item-1">
             <h3 class="slider__title">Крем-брюле и пломбир с малиновым джемом</h3>
@@ -101,11 +100,6 @@
             <a href="#" class="button slider__button">Давайте оба!</a>
           </li>
         </ul>
-        <div class="slider__controls">
-          <label class="slider__toggle" for="slide-1__radio">Слайд 1</label>
-          <label class="slider__toggle" for="slide-2__radio">Слайд 2</label>
-          <label class="slider__toggle" for="slide-3__radio">Слайд 3</label>
-        </div>
       </section>
 
       <section class="promo">
