@@ -20,10 +20,10 @@
     <header class="main-header">
       <nav class="main-menu">
         <a class="main-header__logo"><img src="img/logo.svg" alt="Логотип сайта магазина мороженого «Глэйси»" width="154" height="64"></a>
-        <ul class="main-menu__list">
+        <ul class="main-menu__list" aria-label="Главное меню.">
           <li class="main-menu__item">
-            <a class="main-menu__link" href="#">Каталог</a>
-            <ul class="submenu dropdown">
+            <a class="main-menu__link" href="#" aria-haspopup="true">Каталог</a>
+            <ul class="submenu dropdown" aria-label="Подменю пункта Каталог.">
               <li class="submenu__item"><a class="submenu__link" href="#">Новинки</a></li>
               <li class="submenu__item"><a class="submenu__link" href="catalog.html">Сливочное</a></li>
               <li class="submenu__item"><a class="submenu__link" href="#">Щербеты</a></li>
@@ -34,44 +34,57 @@
           <li class="main-menu__item"><a class="main-menu__link" href="#">Доставка и оплата</a></li>
           <li class="main-menu__item"><a class="main-menu__link" href="#">О Компании</a></li>
         </ul>
-        <div class="user-menu">
-          <div class="user-menu__item">
-            <a class="user-menu__button" href="#">
-              <svg class="user-menu__icon" width="17" height="17">
+        <ul class="user-menu" aria-label="Меню пользователя.">
+          <li class="user-menu__item">
+            <button class="user-menu__button" type="submit" form="search-form">
+              <svg class="user-menu__icon" width="17" height="17" aria-hidden="true">
                 <use xlink:href="#search-icon"/>
               </svg>
-              <span class="visually-hidden">Поиск</span>
-            </a>
-            <div class="search-form dropdown">
-              <!-- Здесь будет форма поиска -->
-            </div>
-          </div>
-          <div class="user-menu__item">
-            <a class="user-menu__button" href="#">
-              <svg class="user-menu__icon" width="21" height="19">
+              Поиск по сайту
+            </button>
+            <form class="search-form dropdown" id="search-form" action="https://echo.htmlacademy.ru" method="get">
+              <label class="visually-hidden" for="search-field">Поле поиска</label>
+              <input type="search" name="search" id="search-field" placeholder="Что ищем?" required>
+              <button type="submit" class="visually-hidden">Найти</button>
+            </form>
+          </li>
+          <li class="user-menu__item">
+            <a class="user-menu__button" href="#" aria-label="Вход в личный кабинет.">
+              <svg class="user-menu__icon" width="21" height="19" aria-hidden="true">
                 <use xlink:href="#entrance-icon"/>
               </svg>
               Вход
             </a>
-            <div class="login-form dropdown">
-              <!-- Здесь будет форма авторизации -->
-            </div>
-          </div>
-          <div class="user-menu__item">
-            <a class="user-menu__button" href="#">
-              <svg class="user-menu__icon" width="21" height="20">
+            <form class="login-form dropdown" action="https://echo.htmlacademy.ru" method="post">
+              <p>
+                <label class="visually-hidden" for="login-field">Электронная почта.</label>
+                <input type="email" name="login" id="login-field" placeholder="Электронная почта" required>
+              </p>
+              <p>
+                <label class="visually-hidden" for="password-field">Пароль.</label>
+                <input type="password" name="password" id="password-field" placeholder="Пароль" required>
+              </p>
+              <div>
+                <button type="submit" class="button login-form__button">Войти</button>
+                <p class="login-form__account">
+                  <a href="#" class="link--dark">Забыли пароль?</a>
+                  <a href="#" class="link--dark">Новая регистрация</a>
+                </p>
+              </div>
+            </form>
+          </li>
+          <li class="user-menu__item">
+            <a class="user-menu__button" href="#" aria-label="Корзина: пусто.">
+              <svg class="user-menu__icon" width="21" height="20" aria-hidden="true">
                 <use xlink:href="#basket-icon"/>
               </svg>
               Пусто
             </a>
-            <div class="basket-form dropdown">
-              <!-- Здесь будет форма корзины -->
-            </div>
-          </div>
-        </div>
+          </li>
+        </ul>
       </nav>
       <p class="main-header__schedule">С 10 до 20, ежедневно</p>
-      <p class="main-header__phone-number">8 812 450-25-25</p>
+      <a class="main-header__phone-number" href="tel:+78124502525" aria-label="Контактный телефон: 8 812 450-25-25">8 812 450-25-25</a>
     </header>
 
     <main>
@@ -79,46 +92,48 @@
       <section class="slider">
         <h2 class="visually-hidden">Новинки в нашем каталоге</h2>
         <div class="slider__controls">
-          <button class="slider__toggle slider__toggle-1">Слайд 1</button>
+          <button class="slider__toggle slider__toggle-1 slider__toggle--current" aria-label="Текущий Слайд 1">Слайд 1</button>
           <button class="slider__toggle slider__toggle-2">Слайд 2</button>
           <button class="slider__toggle slider__toggle-3">Слайд 3</button>
         </div>
-        <ul class="slider__list">
+        <ul class="slider__list" aria-label="Слайды с новинками.">
           <li class="slider__item slider__item-1">
             <h3 class="slider__title">Крем-брюле и пломбир с малиновым джемом</h3>
             <img src="img/slide-1.png" alt="Крем-брюле и пломбир с малиновым джемом" width="1045" height="881">
-            <a href="#" class="button slider__button">Давайте оба!</a>
+            <a href="#" class="button slider__button" aria-label="Открыть страницу новинок.">Давайте оба!</a>
           </li>
           <li class="slider__item slider__item-2">
             <h3 class="slider__title">Шоколадный пломбир и лимонный сорбет</h3>
             <img src="img/slide-2.png" alt="Шоколадный пломбир и лимонный сорбет" width="1065" height="859">
-            <a href="#" class="button slider__button">Давайте оба!</a>
+            <a href="#" class="button slider__button" aria-label="Открыть страницу новинок.">Давайте оба!</a>
           </li>
           <li class="slider__item slider__item-3">
             <h3 class="slider__title">Пломбир с помадкой и клубничный щербет</h3>
             <img src="img/slide-3.png" alt="Пломбир с помадкой и клубничный щербет" width="1079" height="854">
-            <a href="#" class="button slider__button">Давайте оба!</a>
+            <a href="#" class="button slider__button" aria-label="Открыть страницу новинок.">Давайте оба!</a>
           </li>
         </ul>
       </section>
 
       <section class="promo">
         <h2 class="visually-hidden">Акции и специальные предложения</h2>
-        <div class="promo__item">
-          <h3 class="promo__title">Малинка даром!</h3>
-          <p class="promo__description">При покупке 2 кг любого фруктового мороженого, добавим в ваш заказ банку малинового варенья бесплатно.</p>
-          <a href="#" class="promo__button button">Хочу варенье!</a>
-        </div>
-        <div class="promo__item">
-          <h3 class="promo__title">Шоколадки даром!</h3>
-          <p class="promo__description">При покупке 2 кг пломбира, добавим в ваш заказ упаковку вкуснейшей шоколадной присыпки совершенно бесплатно.</p>
-          <a href="#" class="promo__button button">Хочу шоколадки!</a>
-        </div>
+        <ul class="promo__list" aria-label="Список промоакций.">
+          <li class="promo__item">
+            <h3 class="promo__title">Малинка даром!</h3>
+            <p class="promo__description">При покупке 2 кг любого фруктового мороженого, добавим в ваш заказ банку малинового варенья бесплатно.</p>
+            <a href="#" class="promo__button button">Хочу варенье!</a>
+          </li>
+          <li class="promo__item">
+            <h3 class="promo__title">Шоколадки даром!</h3>
+            <p class="promo__description">При покупке 2 кг пломбира, добавим в ваш заказ упаковку вкуснейшей шоколадной присыпки совершенно бесплатно.</p>
+            <a href="#" class="promo__button button">Хочу шоколадки!</a>
+          </li>
+        </ul>
       </section>
 
       <section class="products">
         <h2 class="visually-hidden">Хиты продаж</h2>
-        <ul class="products__list">
+        <ul class="products__list" aria-label="Список хитов продаж.">
           <li class="product product--hit">
             <h3 class="product__name"><a class="link" href="#">Сливочное с апельсиновым джемом и цитрусовой стружкой</a></h3>
             <img class="product__photo" src="img/product-1.jpg" alt="Сливочное с апельсиновым джемом и цитрусовой стружкой" width="267" height="267">
@@ -165,19 +180,23 @@
       <section class="subscription">
         <h2 class="visually-hidden">Подписка на рассылку</h2>
         <p class="subscription__title">Подпишитесь на нашу сладкую рассылку и будете всегда в курсе всего самого вкусного, что у нас происходит. Обещаем не спамить и не слать всякой ненужной ерунды. Честно =)</p>
-        <!-- Здесь будет форма подписки -->
+        <form class="subscription__form" action="https://echo.htmlacademy.ru" method="post">
+          <label class="visually-hidden" for="email-subscription-field">Электронная почта для получения рассылки.</label>
+          <input type="email" name="email-subscription" id="email-subscription-field" placeholder="Электронная почта" required>
+          <button type="submit" class="button subscription__button">Отправить</button>
+        </form>
       </section>
 
       <section class="contacts">
-        <h2 class="visually-hidden">Как нас найти</h2>
+        <h2 class="visually-hidden">Наши контакты</h2>
         <div class="contacts__map"></div>
         <div class="contacts__legend">
-          <p class="contacts__section">Адрес главного офиса<br>
-            и офлайн-магазина:
+          <p class="contacts__section">
+            <span class="contacts__title">Адрес главного офиса и офлайн-магазина:</span>
             <span class="contacts__address">ул. Большая Конюшенная 19/8, Санкт-Петербург</span>
           </p>
           <p class="contacts__section">Для заказов по телефону:
-            <span class="contacts__phone">8 812 450-25-25</span>
+            <a class="contacts__phone" href="tel:+78124502525">8 812 450-25-25</a>
             <span class="contacts__schedule">(с 10 до 20 ежедневно)</span>
           </p>
           <a class="button contacts__button" href="#">Форма обратной связи</a>
@@ -186,28 +205,42 @@
     </main>
 
     <footer class="main-footer">
-      <ul class="social-buttons">
+      <ul class="social-buttons" aria-label="Мы в социальных сетях: ">
         <li class="social-buttons__item"><a class="social-buttons__link" href="#">Твиттер</a></li>
         <li class="social-buttons__item"><a class="social-buttons__link" href="#">Инстаграм</a></li>
         <li class="social-buttons__item"><a class="social-buttons__link" href="#">Фейсбук</a></li>
         <li class="social-buttons__item"><a class="social-buttons__link" href="#">Вконтакте</a></li>
       </ul>
-      <ul class="footer-menu">
+      <ul class="footer-menu" aria-label="Официальные документы и стандарты.">
         <li class="footer-menu__item"><a class="link link--favorite" href="#">Для поставщиков</a></li>
         <li class="footer-menu__item"><a class="link" href="#">Наши документы</a></li>
         <li class="footer-menu__item"><a class="link" href="#">О производстве</a></li>
         <li class="footer-menu__item"><a class="link" href="#">Экологические стандарты</a></li>
       </ul>
       <div class="footer-copyright">
-        <a class="footer-copyright__logo" href="https://htmlacademy.ru/intensive/htmlcss"><img src="img/copyright-logo.svg" alt="Логотип «HTML Academy»" width="108" height="39"></a>
+        <a class="footer-copyright__logo" href="https://htmlacademy.ru/intensive/htmlcss"><img src="img/copyright-logo.svg" alt="Логотип «HTML Academy». Переход на страницу интенсивных курсов от HTML Academy." width="108" height="39"></a>
         <p class="footer-copyright__developer">Сделано в <a class="link" href="https://htmlacademy.ru/intensive/htmlcss">HTML Academy</a> © 2017</p>
       </div>
     </footer>
 
     <section class="modal modal-feedback">
       <h2 class="visually-hidden">Обратная связь</h2>
-      <b class="modal-feedback__title">Мы обязательно вам ответим!</b>
-      <!-- Здесь будет форма обратной связи -->
+      <p class="modal-feedback__title">Мы обязательно вам ответим!</p>
+      <form class="feedback-form" action="https://echo.htmlacademy.ru" method="post">
+        <p>
+          <label class="visually-hidden" for="name-field">Представьтесь, пожалуйста.</label>
+          <input type="text" name="name" id="name-field" placeholder="Как вас зовут?" required>
+        </p>
+        <p>
+          <label class="visually-hidden" for="email-feedback-field">Электронная почта.</label>
+          <input type="email" name="email-feedback" id="email-feedback-field" placeholder="Ваша почта для ответа?" required>
+        </p>
+        <p>
+          <label class="visually-hidden" for="message-field">Ваше сообщение.</label>
+          <textarea name="message" id="message-field" rows="8" placeholder="Напишите что-нибудь..." required></textarea>
+        </p>
+        <button type="submit" class="button feedback-form__button">Отправить</button>
+      </form>
       <button class="modal-feedback__close-button">Закрыть</button>
     </section>
 
