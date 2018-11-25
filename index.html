@@ -17,13 +17,14 @@
       </svg>
     </div>
 
+    <a class="visually-hidden visually-hidden-focusable link" href="#main">Перейти к основному контенту</a>
     <header class="main-header">
       <nav class="main-menu">
         <a class="main-header__logo"><img src="img/logo.svg" alt="Логотип сайта магазина мороженого «Глэйси»" width="154" height="64"></a>
-        <ul class="main-menu__list" aria-label="Главное меню.">
+        <ul class="main-menu__list" aria-label="главное меню">
           <li class="main-menu__item">
             <a class="main-menu__link" href="#" aria-haspopup="true">Каталог</a>
-            <ul class="submenu dropdown" aria-label="Подменю пункта Каталог.">
+            <ul class="submenu dropdown" aria-label="подменю пункта каталог">
               <li class="submenu__item"><a class="submenu__link" href="#">Новинки</a></li>
               <li class="submenu__item"><a class="submenu__link" href="catalog.html">Сливочное</a></li>
               <li class="submenu__item"><a class="submenu__link" href="#">Щербеты</a></li>
@@ -34,7 +35,7 @@
           <li class="main-menu__item"><a class="main-menu__link" href="#">Доставка и оплата</a></li>
           <li class="main-menu__item"><a class="main-menu__link" href="#">О Компании</a></li>
         </ul>
-        <ul class="user-menu" aria-label="Меню пользователя.">
+        <ul class="user-menu" aria-label="меню пользователя">
           <li class="user-menu__item">
             <button class="user-menu__button" type="submit" form="search-form">
               <svg class="user-menu__icon" width="17" height="17" aria-hidden="true">
@@ -49,7 +50,7 @@
             </form>
           </li>
           <li class="user-menu__item">
-            <a class="user-menu__button" href="#" aria-label="Вход в личный кабинет.">
+            <a class="user-menu__button" href="#" aria-label="вход в личный кабинет">
               <svg class="user-menu__icon" width="21" height="19" aria-hidden="true">
                 <use xlink:href="#entrance-icon"/>
               </svg>
@@ -57,11 +58,11 @@
             </a>
             <form class="login-form dropdown" action="https://echo.htmlacademy.ru" method="post">
               <p>
-                <label class="visually-hidden" for="login-field">Электронная почта.</label>
+                <label class="visually-hidden" for="login-field">Электронная почта</label>
                 <input type="email" name="login" id="login-field" placeholder="Электронная почта" required>
               </p>
               <p>
-                <label class="visually-hidden" for="password-field">Пароль.</label>
+                <label class="visually-hidden" for="password-field">Пароль</label>
                 <input type="password" name="password" id="password-field" placeholder="Пароль" required>
               </p>
               <div>
@@ -74,7 +75,7 @@
             </form>
           </li>
           <li class="user-menu__item">
-            <a class="user-menu__button" href="#" aria-label="Корзина: пусто.">
+            <a class="user-menu__button" href="#" aria-label="корзина пусто">
               <svg class="user-menu__icon" width="21" height="20" aria-hidden="true">
                 <use xlink:href="#basket-icon"/>
               </svg>
@@ -84,40 +85,40 @@
         </ul>
       </nav>
       <p class="main-header__schedule">С 10 до 20, ежедневно</p>
-      <a class="main-header__phone-number" href="tel:+78124502525" aria-label="Контактный телефон: 8 812 450-25-25">8 812 450-25-25</a>
+      <a class="main-header__phone-number" href="tel:+78124502525" aria-label="контактный телефон 8 812 450 25 25">8 812 450-25-25</a>
     </header>
 
-    <main>
+    <main id="main" tabindex="-1">
       <h1 class="visually-hidden">Глэйси - магазин мороженого собственного производства</h1>
       <section class="slider">
         <h2 class="visually-hidden">Новинки в нашем каталоге</h2>
         <div class="slider__controls">
-          <button class="slider__toggle slider__toggle-1 slider__toggle--current" aria-label="Текущий Слайд 1">Слайд 1</button>
+          <button class="slider__toggle slider__toggle-1 slider__toggle--current" aria-label="текущий слайд 1">Слайд 1</button>
           <button class="slider__toggle slider__toggle-2">Слайд 2</button>
           <button class="slider__toggle slider__toggle-3">Слайд 3</button>
         </div>
-        <ul class="slider__list" aria-label="Слайды с новинками.">
+        <ul class="slider__list" aria-label="слайды с новинками">
           <li class="slider__item slider__item-1">
             <h3 class="slider__title">Крем-брюле и пломбир с малиновым джемом</h3>
             <img src="img/slide-1.png" alt="Крем-брюле и пломбир с малиновым джемом" width="1045" height="881">
-            <a href="#" class="button slider__button" aria-label="Открыть страницу новинок.">Давайте оба!</a>
+            <a href="#" class="button slider__button" aria-label="купить крем-брюле и пломбир с малиновым джемом">Давайте оба!</a>
           </li>
           <li class="slider__item slider__item-2">
             <h3 class="slider__title">Шоколадный пломбир и лимонный сорбет</h3>
             <img src="img/slide-2.png" alt="Шоколадный пломбир и лимонный сорбет" width="1065" height="859">
-            <a href="#" class="button slider__button" aria-label="Открыть страницу новинок.">Давайте оба!</a>
+            <a href="#" class="button slider__button" aria-label="купить шоколадный пломбир и лимонный сорбет">Давайте оба!</a>
           </li>
           <li class="slider__item slider__item-3">
             <h3 class="slider__title">Пломбир с помадкой и клубничный щербет</h3>
             <img src="img/slide-3.png" alt="Пломбир с помадкой и клубничный щербет" width="1079" height="854">
-            <a href="#" class="button slider__button" aria-label="Открыть страницу новинок.">Давайте оба!</a>
+            <a href="#" class="button slider__button" aria-label="купить пломбир с помадкой и клубничный щербет">Давайте оба!</a>
           </li>
         </ul>
       </section>
 
       <section class="promo">
         <h2 class="visually-hidden">Акции и специальные предложения</h2>
-        <ul class="promo__list" aria-label="Список промоакций.">
+        <ul class="promo__list" aria-label="список промоакций">
           <li class="promo__item">
             <h3 class="promo__title">Малинка даром!</h3>
             <p class="promo__description">При покупке 2 кг любого фруктового мороженого, добавим в ваш заказ банку малинового варенья бесплатно.</p>
@@ -133,7 +134,7 @@
 
       <section class="products">
         <h2 class="visually-hidden">Хиты продаж</h2>
-        <ul class="products__list" aria-label="Список хитов продаж.">
+        <ul class="products__list" aria-label="список хитов продаж">
           <li class="product product--hit">
             <h3 class="product__name"><a class="link" href="#">Сливочное с апельсиновым джемом и цитрусовой стружкой</a></h3>
             <img class="product__photo" src="img/product-1.jpg" alt="Сливочное с апельсиновым джемом и цитрусовой стружкой" width="267" height="267">
@@ -174,14 +175,14 @@
 
       <article class="blog-news">
         <h2 class="blog-news__title">Новое в нашем блоге</h2>
-        <a class="blog-news__preview link--dark" href="blog.html" >10 способов сервировки фруктовых щербетов к столу</a>
+        <a class="blog-news__preview link--dark" href="blog.html">10 способов сервировки фруктовых щербетов к столу</a>
       </article>
 
       <section class="subscription">
         <h2 class="visually-hidden">Подписка на рассылку</h2>
         <p class="subscription__title">Подпишитесь на нашу сладкую рассылку и будете всегда в курсе всего самого вкусного, что у нас происходит. Обещаем не спамить и не слать всякой ненужной ерунды. Честно =)</p>
         <form class="subscription__form" action="https://echo.htmlacademy.ru" method="post">
-          <label class="visually-hidden" for="email-subscription-field">Электронная почта для получения рассылки.</label>
+          <label class="visually-hidden" for="email-subscription-field">Электронная почта для получения рассылки</label>
           <input type="email" name="email-subscription" id="email-subscription-field" placeholder="Электронная почта" required>
           <button type="submit" class="button subscription__button">Отправить</button>
         </form>
@@ -205,20 +206,20 @@
     </main>
 
     <footer class="main-footer">
-      <ul class="social-buttons" aria-label="Мы в социальных сетях: ">
+      <ul class="social-buttons" aria-label="мы в социальных сетях">
         <li class="social-buttons__item"><a class="social-buttons__link" href="#">Твиттер</a></li>
         <li class="social-buttons__item"><a class="social-buttons__link" href="#">Инстаграм</a></li>
         <li class="social-buttons__item"><a class="social-buttons__link" href="#">Фейсбук</a></li>
         <li class="social-buttons__item"><a class="social-buttons__link" href="#">Вконтакте</a></li>
       </ul>
-      <ul class="footer-menu" aria-label="Официальные документы и стандарты.">
+      <ul class="footer-menu" aria-label="официальные документы и стандарты">
         <li class="footer-menu__item"><a class="link link--favorite" href="#">Для поставщиков</a></li>
         <li class="footer-menu__item"><a class="link" href="#">Наши документы</a></li>
         <li class="footer-menu__item"><a class="link" href="#">О производстве</a></li>
         <li class="footer-menu__item"><a class="link" href="#">Экологические стандарты</a></li>
       </ul>
       <div class="footer-copyright">
-        <a class="footer-copyright__logo" href="https://htmlacademy.ru/intensive/htmlcss"><img src="img/copyright-logo.svg" alt="Логотип «HTML Academy». Переход на страницу интенсивных курсов от HTML Academy." width="108" height="39"></a>
+        <a class="footer-copyright__logo" href="https://htmlacademy.ru/intensive/htmlcss"><img src="img/copyright-logo.svg" alt="Логотип «HTML Academy». Переход на страницу интенсивных курсов от HTML Academy" width="108" height="39"></a>
         <p class="footer-copyright__developer">Сделано в <a class="link" href="https://htmlacademy.ru/intensive/htmlcss">HTML Academy</a> © 2017</p>
       </div>
     </footer>
@@ -228,15 +229,15 @@
       <p class="modal-feedback__title">Мы обязательно вам ответим!</p>
       <form class="feedback-form" action="https://echo.htmlacademy.ru" method="post">
         <p>
-          <label class="visually-hidden" for="name-field">Представьтесь, пожалуйста.</label>
+          <label class="visually-hidden" for="name-field">Представьтесь, пожалуйста</label>
           <input type="text" name="name" id="name-field" placeholder="Как вас зовут?" required>
         </p>
         <p>
-          <label class="visually-hidden" for="email-feedback-field">Электронная почта.</label>
+          <label class="visually-hidden" for="email-feedback-field">Электронная почта</label>
           <input type="email" name="email-feedback" id="email-feedback-field" placeholder="Ваша почта для ответа?" required>
         </p>
         <p>
-          <label class="visually-hidden" for="message-field">Ваше сообщение.</label>
+          <label class="visually-hidden" for="message-field">Ваше сообщение</label>
           <textarea name="message" id="message-field" rows="8" placeholder="Напишите что-нибудь..." required></textarea>
         </p>
         <button type="submit" class="button feedback-form__button">Отправить</button>
