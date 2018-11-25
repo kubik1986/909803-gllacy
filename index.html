@@ -57,15 +57,15 @@
               Вход
             </a>
             <form class="login-form dropdown" action="https://echo.htmlacademy.ru" method="post">
-              <p>
+              <p class="login-form__row">
                 <label class="visually-hidden" for="login-field">Электронная почта</label>
                 <input type="email" name="login" id="login-field" placeholder="Электронная почта" required>
               </p>
-              <p>
+              <p class="login-form__row">
                 <label class="visually-hidden" for="password-field">Пароль</label>
                 <input type="password" name="password" id="password-field" placeholder="Пароль" required>
               </p>
-              <div>
+              <div class="login-form__row">
                 <button type="submit" class="button login-form__button">Войти</button>
                 <p class="login-form__account">
                   <a href="#" class="link--dark">Забыли пароль?</a>
@@ -228,15 +228,15 @@
       <h2 class="visually-hidden" id="feedback-label">Обратная связь</h2>
       <p class="modal-feedback__title" id="feedback-description">Мы обязательно вам ответим!</p>
       <form class="feedback-form" action="https://echo.htmlacademy.ru" method="post">
-        <p>
+        <p class="modal-feedback__row">
           <label class="visually-hidden" for="name-field">Представьтесь, пожалуйста</label>
           <input type="text" name="name" id="name-field" placeholder="Как вас зовут?" required>
         </p>
-        <p>
+        <p class="modal-feedback__row">
           <label class="visually-hidden" for="email-feedback-field">Электронная почта</label>
           <input type="email" name="email-feedback" id="email-feedback-field" placeholder="Ваша почта для ответа?" required>
         </p>
-        <p>
+        <p class="modal-feedback__row">
           <label class="visually-hidden" for="message-field">Ваше сообщение</label>
           <textarea name="message" id="message-field" rows="8" placeholder="Напишите что-нибудь..." required></textarea>
         </p>
