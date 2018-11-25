@@ -18,6 +18,7 @@
     </div>
 
     <header class="main-header">
+      <a class="visually-hidden visually-hidden-focusable link" href="#main">Перейти к основному контенту</a>
       <nav class="main-menu">
         <a  class="main-header__logo" href="index.html"><img src="img/logo.svg" alt="Логотип сайта магазина мороженого «Глэйси». Переход на главную страницу." width="154" height="64"></a>
         <ul class="main-menu__list" aria-label="Главное меню.">
@@ -45,7 +46,7 @@
             <form class="search-form dropdown" id="search-form" action="https://echo.htmlacademy.ru" method="get">
               <label class="visually-hidden" for="search-field">Поле поиска</label>
               <input type="search" name="search" id="search-field" placeholder="Что ищем?" required>
-              <button type="submit" class="visually-hidden">Найти</button>
+              <button type="submit" class="visually-hidden visually-hidden-focusable button search-form__button">Найти</button>
             </form>
           </li>
           <li class="user-menu__item">
@@ -109,7 +110,7 @@
       <a class="main-header__phone-number" href="tel:+78124502525" aria-label="Контактный телефон: 8 812 450-25-25">8 812 450-25-25</a>
     </header>
 
-    <main>
+    <main id="main" tabindex="-1">
       <ul class="breadcrumbs" aria-label="Навигационная цепочка.">
         <li class="breadcrumbs__item"><a class="link" href="index.html">Главная</a></li>
         <li class="breadcrumbs__item"><a class="link" href="#">Каталог</a></li>
