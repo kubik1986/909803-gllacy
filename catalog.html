@@ -45,7 +45,7 @@
             </button>
             <form class="search-form dropdown" id="search-form" action="https://echo.htmlacademy.ru" method="get">
               <label class="visually-hidden" for="search-field">Поле поиска</label>
-              <input type="search" name="search" id="search-field" placeholder="Что ищем?" required>
+              <input class="search-form__input input" type="search" name="search" id="search-field" placeholder="Что ищем?" required>
               <button type="submit" class="visually-hidden visually-hidden-focusable button search-form__button">Найти</button>
             </form>
           </li>
@@ -59,11 +59,11 @@
             <form class="login-form dropdown" action="https://echo.htmlacademy.ru" method="post">
               <p class="login-form__row">
                 <label class="visually-hidden" for="login-field">Электронная почта</label>
-                <input type="email" name="login" id="login-field" placeholder="Электронная почта" required>
+                <input class="login-form__input input" type="email" name="login" id="login-field" placeholder="Электронная почта" required>
               </p>
               <p class="login-form__row">
                 <label class="visually-hidden" for="password-field">Пароль</label>
-                <input type="password" name="password" id="password-field" placeholder="Пароль" required>
+                <input class="login-form__input input" type="password" name="password" id="password-field" placeholder="Пароль" required>
               </p>
               <div class="login-form__row">
                 <button type="submit" class="button login-form__button">Войти</button>
@@ -120,12 +120,86 @@
 
       <section class="filters">
         <h2 class="visually-hidden">Фильтры просмотра</h2>
-        <!-- Здесь будет форма фильтров -->
+        <form class="filters-form" action="https://echo.htmlacademy.ru" method="get">
+          <fieldset class="filters-form__filter">
+            <legend class="filters-form__legend" for="sort-select">Сортировка:</legend>
+            <select class="filters-form__field filters-form__field--select" name="sort" id="sort-select">
+              <option value="relevance" selected>по популярности</option>
+              <option value="cheap">сначала недорогие</option>
+              <option value="expensive">сначала дорогие</option>
+              <option value="fat">по жирности</option>
+            </select>
+          </fieldset>
+          <fieldset class="filters-form__filter">
+            <legend class="filters-form__legend">Цена:
+              <input class="filters-form__price" type="number" name="min-price" id="min-price-field" min="80" max="700" value="100">руб. -
+              <input class="filters-form__price" type="number" name="max-price" id="max-price-field" min="80" max="700" value="500">руб.
+            </legend>
+            <label class="visually-hidden" for="min-price-field">Минимальная цена</label>
+            <label class="visually-hidden" for="max-price-field">Максимальная цена</label>
+            <div class="filters-form__field">
+              <div class="slider-contoller">
+                <div class="slider-contoller__scale">
+                  <div class="slider-contoller__current-range"></div>
+                </div>
+                <div class="slider-contoller__toggle slider-contoller__toggle--min"></div>
+                <div class="slider-contoller__toggle slider-contoller__toggle--max"></div>
+              </div>
+            </div>
+          </fieldset>
+          <fieldset class="filters-form__filter">
+            <legend class="filters-form__legend">Жирность:</legend>
+            <ul class="filters-form__field">
+              <li class="filters-form__option">
+                <input class="visually-hidden filters-form__radio" type="radio" name="fat" id="fat-radio-1" value="0">
+                <label class="filters-form__label filters-form__label--radio" for="fat-radio-1">0%</label>
+              </li>
+              <li class="filters-form__option">
+                <input class="visually-hidden filters-form__radio" type="radio" name="fat" id="fat-radio-2" value="10" checked>
+                <label class="filters-form__label filters-form__label--radio" for="fat-radio-2">до 10%</label>
+              </li>
+              <li class="filters-form__option">
+                <input class="visually-hidden filters-form__radio" type="radio" name="fat" id="fat-radio-3" value="30">
+                <label class="filters-form__label filters-form__label--radio" for="fat-radio-3">до 30%</label>
+              </li>
+              <li class="filters-form__option">
+                <input class="visually-hidden filters-form__radio" type="radio" id="fat-radio-4" name="fat" value="100">
+                <label class="filters-form__label filters-form__label--radio" for="fat-radio-4">выше 30%</label>
+              </li>
+            </ul>
+          </fieldset>
+          <fieldset class="filters-form__filter">
+            <legend class="filters-form__legend">Наполнители:</legend>
+            <ul class="filters-form__field">
+              <li>
+                <input class="visually-hidden filters-form__checkbox" type="checkbox" name="fillers" id="fillers-checkbox-1" value="chocolate" checked>
+                <label class="filters-form__label filters-form__label--checkbox" for="fillers-checkbox-1">шоколадные</label>
+              </li>
+              <li>
+                <input class="visually-hidden filters-form__checkbox" type="checkbox" name="fillers" id="fillers-checkbox-2" value="sugar-topping" checked>
+                <label class="filters-form__label filters-form__label--checkbox" for="fillers-checkbox-2">сахарные присыпки</label>
+              </li>
+              <li>
+                <input class="visually-hidden filters-form__checkbox" type="checkbox" name="fillers" id="fillers-checkbox-3" value="fruit">
+                <label class="filters-form__label filters-form__label--checkbox" for="fillers-checkbox-3">фрукты</label>
+              </li>
+              <li>
+                <input class="visually-hidden filters-form__checkbox" type="checkbox" name="fillers" id="fillers-checkbox-4" value="syrup">
+                <label class="filters-form__label filters-form__label--checkbox" for="fillers-checkbox-4">сиропы</label>
+              </li>
+              <li>
+                <input class="visually-hidden filters-form__checkbox" type="checkbox" name="fillers" id="fillers-checkbox-5" value="jam">
+                <label class="filters-form__label filters-form__label--checkbox" for="fillers-checkbox-5">джемы</label>
+              </li>
+            </ul>
+          </fieldset>
+          <button class="filters-form__button" type="submit">Применить</button>
+        </form>
       </section>
 
       <section class="products">
         <h2 class="visually-hidden">Каталог сливочного мороженого</h2>
-        <ul class="products__list" aria-label="список сливочного мороженого">
+        <ul class="products__list" aria-label="сливочное мороженое">
           <li class="product">
             <h3 class="product__name"><a class="link" href="#">Сливочное с апельсиновым джемом и цитрусовой стружкой</a></h3>
             <img class="product__photo" src="img/product-1.jpg" alt="Сливочное с апельсиновым джемом и цитрусовой стружкой" width="267" height="267">

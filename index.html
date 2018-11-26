@@ -45,7 +45,7 @@
             </button>
             <form class="search-form dropdown" id="search-form" action="https://echo.htmlacademy.ru" method="get">
               <label class="visually-hidden" for="search-field">Поле поиска</label>
-              <input type="search" name="search" id="search-field" placeholder="Что ищем?" required>
+              <input class="search-form__input input" type="search" name="search" id="search-field" placeholder="Что ищем?" required>
               <button type="submit" class="visually-hidden visually-hidden-focusable button search-form__button">Найти</button>
             </form>
           </li>
@@ -59,11 +59,11 @@
             <form class="login-form dropdown" action="https://echo.htmlacademy.ru" method="post">
               <p class="login-form__row">
                 <label class="visually-hidden" for="login-field">Электронная почта</label>
-                <input type="email" name="login" id="login-field" placeholder="Электронная почта" required>
+                <input class="login-form__input input" type="email" name="login" id="login-field" placeholder="Электронная почта" required>
               </p>
               <p class="login-form__row">
                 <label class="visually-hidden" for="password-field">Пароль</label>
-                <input type="password" name="password" id="password-field" placeholder="Пароль" required>
+                <input class="login-form__input input" type="password" name="password" id="password-field" placeholder="Пароль" required>
               </p>
               <div class="login-form__row">
                 <button type="submit" class="button login-form__button">Войти</button>
@@ -118,7 +118,7 @@
 
       <section class="promo">
         <h2 class="visually-hidden">Акции и специальные предложения</h2>
-        <ul class="promo__list" aria-label="список промоакций">
+        <ul class="promo__list" aria-label="промоакции">
           <li class="promo__item">
             <h3 class="promo__title">Малинка даром!</h3>
             <p class="promo__description">При покупке 2 кг любого фруктового мороженого, добавим в ваш заказ банку малинового варенья бесплатно.</p>
@@ -134,7 +134,7 @@
 
       <section class="products">
         <h2 class="visually-hidden">Хиты продаж</h2>
-        <ul class="products__list" aria-label="список хитов продаж">
+        <ul class="products__list" aria-label="хиты продаж">
           <li class="product product--hit">
             <h3 class="product__name"><a class="link" href="#">Сливочное с апельсиновым джемом и цитрусовой стружкой</a></h3>
             <img class="product__photo" src="img/product-1.jpg" alt="Сливочное с апельсиновым джемом и цитрусовой стружкой" width="267" height="267">
@@ -183,7 +183,7 @@
         <p class="subscription__title">Подпишитесь на нашу сладкую рассылку и будете всегда в курсе всего самого вкусного, что у нас происходит. Обещаем не спамить и не слать всякой ненужной ерунды. Честно =)</p>
         <form class="subscription__form" action="https://echo.htmlacademy.ru" method="post">
           <label class="visually-hidden" for="email-subscription-field">Электронная почта для получения рассылки</label>
-          <input type="email" name="email-subscription" id="email-subscription-field" placeholder="Электронная почта" required>
+          <input class="subscription__input input" type="email" name="email-subscription" id="email-subscription-field" placeholder="Электронная почта" required>
           <button type="submit" class="button subscription__button">Отправить</button>
         </form>
       </section>
@@ -230,15 +230,15 @@
       <form class="feedback-form" action="https://echo.htmlacademy.ru" method="post">
         <p class="modal-feedback__row">
           <label class="visually-hidden" for="name-field">Представьтесь, пожалуйста</label>
-          <input type="text" name="name" id="name-field" placeholder="Как вас зовут?" required>
+          <input class="feedback-form__input input" type="text" name="name" id="name-field" placeholder="Как вас зовут?" required>
         </p>
         <p class="modal-feedback__row">
           <label class="visually-hidden" for="email-feedback-field">Электронная почта</label>
-          <input type="email" name="email-feedback" id="email-feedback-field" placeholder="Ваша почта для ответа?" required>
+          <input class="feedback-form__input input" type="email" name="email-feedback" id="email-feedback-field" placeholder="Ваша почта для ответа?" required>
         </p>
         <p class="modal-feedback__row">
           <label class="visually-hidden" for="message-field">Ваше сообщение</label>
-          <textarea name="message" id="message-field" rows="8" placeholder="Напишите что-нибудь..." required></textarea>
+          <textarea class="feedback-form__text input" name="message" id="message-field" rows="8" placeholder="Напишите что-нибудь..." required></textarea>
         </p>
         <button type="submit" class="button feedback-form__button">Отправить</button>
       </form>
