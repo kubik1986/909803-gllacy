@@ -131,19 +131,22 @@
             </select>
           </fieldset>
           <fieldset class="filters-form__filter">
-            <legend class="filters-form__legend">Цена:
-              <input class="filters-form__price" type="number" name="min-price" id="min-price-field" min="80" max="700" value="100">руб. -
-              <input class="filters-form__price" type="number" name="max-price" id="max-price-field" min="80" max="700" value="500">руб.
-            </legend>
-            <label class="visually-hidden" for="min-price-field">Минимальная цена</label>
-            <label class="visually-hidden" for="max-price-field">Максимальная цена</label>
+            <legend class="filters-form__legend filters-form__legend--price">Цена:</legend>
+            <div class="filters-form__price-range">
+              <label class="visually-hidden" for="min-price-field">от:</label>
+              <input class="filters-form__price" type="number" name="min-price" id="min-price-field" min="80" max="700" value="100">
+              <span>руб. - </span>
+              <label class="visually-hidden" for="max-price-field">до:</label>
+              <input class="filters-form__price" type="number" name="max-price" id="max-price-field" min="80" max="700" value="500">
+              <span>руб.</span>
+            </div>
             <div class="filters-form__field">
               <div class="slider-contoller">
                 <div class="slider-contoller__scale">
                   <div class="slider-contoller__current-range"></div>
                 </div>
-                <div class="slider-contoller__toggle slider-contoller__toggle--min"></div>
-                <div class="slider-contoller__toggle slider-contoller__toggle--max"></div>
+                <div class="slider-contoller__grip slider-contoller__grip--min"></div>
+                <div class="slider-contoller__grip slider-contoller__grip--max"></div>
               </div>
             </div>
           </fieldset>
@@ -151,19 +154,19 @@
             <legend class="filters-form__legend">Жирность:</legend>
             <ul class="filters-form__field">
               <li class="filters-form__option">
-                <input class="visually-hidden filters-form__radio" type="radio" name="fat" id="fat-radio-1" value="0">
+                <input class="visually-hidden" type="radio" name="fat" id="fat-radio-1" value="0">
                 <label class="filters-form__label filters-form__label--radio" for="fat-radio-1">0%</label>
               </li>
               <li class="filters-form__option">
-                <input class="visually-hidden filters-form__radio" type="radio" name="fat" id="fat-radio-2" value="10" checked>
+                <input class="visually-hidden" type="radio" name="fat" id="fat-radio-2" value="10" checked>
                 <label class="filters-form__label filters-form__label--radio" for="fat-radio-2">до 10%</label>
               </li>
               <li class="filters-form__option">
-                <input class="visually-hidden filters-form__radio" type="radio" name="fat" id="fat-radio-3" value="30">
+                <input class="visually-hidden" type="radio" name="fat" id="fat-radio-3" value="30">
                 <label class="filters-form__label filters-form__label--radio" for="fat-radio-3">до 30%</label>
               </li>
               <li class="filters-form__option">
-                <input class="visually-hidden filters-form__radio" type="radio" id="fat-radio-4" name="fat" value="100">
+                <input class="visually-hidden" type="radio" id="fat-radio-4" name="fat" value="100">
                 <label class="filters-form__label filters-form__label--radio" for="fat-radio-4">выше 30%</label>
               </li>
             </ul>
@@ -171,24 +174,24 @@
           <fieldset class="filters-form__filter">
             <legend class="filters-form__legend">Наполнители:</legend>
             <ul class="filters-form__field">
-              <li>
-                <input class="visually-hidden filters-form__checkbox" type="checkbox" name="fillers" id="fillers-checkbox-1" value="chocolate" checked>
+              <li class="filters-form__option">
+                <input class="visually-hidden" type="checkbox" name="fillers" id="fillers-checkbox-1" value="chocolate" checked>
                 <label class="filters-form__label filters-form__label--checkbox" for="fillers-checkbox-1">шоколадные</label>
               </li>
-              <li>
-                <input class="visually-hidden filters-form__checkbox" type="checkbox" name="fillers" id="fillers-checkbox-2" value="sugar-topping" checked>
+              <li class="filters-form__option">
+                <input class="visually-hidden" type="checkbox" name="fillers" id="fillers-checkbox-2" value="sugar-topping" checked>
                 <label class="filters-form__label filters-form__label--checkbox" for="fillers-checkbox-2">сахарные присыпки</label>
               </li>
-              <li>
-                <input class="visually-hidden filters-form__checkbox" type="checkbox" name="fillers" id="fillers-checkbox-3" value="fruit">
+              <li class="filters-form__option">
+                <input class="visually-hidden" type="checkbox" name="fillers" id="fillers-checkbox-3" value="fruit">
                 <label class="filters-form__label filters-form__label--checkbox" for="fillers-checkbox-3">фрукты</label>
               </li>
-              <li>
-                <input class="visually-hidden filters-form__checkbox" type="checkbox" name="fillers" id="fillers-checkbox-4" value="syrup">
+              <li class="filters-form__option">
+                <input class="visually-hidden" type="checkbox" name="fillers" id="fillers-checkbox-4" value="syrup">
                 <label class="filters-form__label filters-form__label--checkbox" for="fillers-checkbox-4">сиропы</label>
               </li>
-              <li>
-                <input class="visually-hidden filters-form__checkbox" type="checkbox" name="fillers" id="fillers-checkbox-5" value="jam">
+              <li class="filters-form__option">
+                <input class="visually-hidden" type="checkbox" name="fillers" id="fillers-checkbox-5" value="jam">
                 <label class="filters-form__label filters-form__label--checkbox" for="fillers-checkbox-5">джемы</label>
               </li>
             </ul>
