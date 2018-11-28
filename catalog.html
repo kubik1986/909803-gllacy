@@ -27,7 +27,7 @@
           <a  class="main-header__logo" href="index.html"><img src="img/logo.svg" alt="Логотип сайта магазина мороженого «Глэйси». Переход на главную страницу" width="154" height="64"></a>
           <ul class="main-menu__list" aria-label="главное меню">
             <li class="main-menu__item">
-              <a class="main-menu__link main-menu__link--current" href="#"  aria-label="текущий пункт меню каталог" aria-haspopup="true">Каталог</a>
+              <a class="main-menu__link-current" href="#"  aria-label="текущий пункт меню каталог" aria-haspopup="true">Каталог</a>
               <ul class="submenu dropdown" aria-label="подменю пункта каталог">
                 <li class="submenu__item"><a class="submenu__link" href="#">Новинки</a></li>
                 <li class="submenu__item"><a class="submenu__link submenu__link--current" href="catalog.html" aria-label="текущий пункт подменю сливочное">Сливочное</a></li>
@@ -61,14 +61,14 @@
                 Вход
               </a>
               <form class="login-form dropdown" action="https://echo.htmlacademy.ru" method="post">
-                <p class="login-form__row">
+                <div class="login-form__row">
                   <label class="visually-hidden" for="login-field">Электронная почта</label>
                   <input class="login-form__input input" type="email" name="login" id="login-field" placeholder="Электронная почта" required>
-                </p>
-                <p class="login-form__row">
+                </div>
+                <div class="login-form__row">
                   <label class="visually-hidden" for="password-field">Пароль</label>
                   <input class="login-form__input input" type="password" name="password" id="password-field" placeholder="Пароль" required>
-                </p>
+                </div>
                 <div class="login-form__row">
                   <button type="submit" class="button login-form__button">Войти</button>
                   <p class="login-form__account">
@@ -105,7 +105,7 @@
                   </tbody>
                   <tfoot>
                     <tr>
-                      <td colspan="5">Итого: 750 руб.</td>
+                      <td class="basket-form__total" colspan="5">Итого: 750 руб.</td>
                     </tr>
                   </tfoot>
                 </table>
@@ -119,7 +119,7 @@
       </div>
     </header>
 
-    <main id="main" tabindex="-1">
+    <main class="main" id="main" tabindex="-1">
       <div class="wrapper">
         <ul class="breadcrumbs" aria-label="навигационная цепочка">
           <li class="breadcrumbs__item"><a class="link" href="index.html">Главная</a></li>
