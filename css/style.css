@@ -11,7 +11,7 @@ body {
   background-color: #849d8f;
 }
 
-/* global box-sizing rule --> */
+/* global styles */
 html {
   box-sizing: border-box;
 }
@@ -19,18 +19,17 @@ html {
 *, *::before, *::after {
   box-sizing: inherit;
 }
-/* <-- */
 
 a {
   text-decoration: none;
 }
 
-/* <main> focusable for correct tab from skip link --> */
+/* <main> focusable for correct tab from skip link */
 .main:focus {
   outline: none;
 }
 
-/* main containers --> */
+/* main containers */
 .container {
   margin: 0 auto;
   padding: 0 27px;
@@ -44,9 +43,8 @@ a {
 .container--contacts {
   padding: 0;
 }
-/* <-- */
 
-/* general link styles --> */
+/* general link styles */
 .link {
   color: #ffffff;
 
@@ -72,9 +70,8 @@ a {
 
   border-bottom-color: rgba(232, 77, 55, 0.3);
 }
-/* <-- */
 
-/* general button styles --> */
+/* general button styles */
 .button {
   font-size: 18px;
   line-height: 24px;
@@ -106,9 +103,8 @@ a {
    linear-gradient(to bottom, #e74a35, #f26843);
   box-shadow: inset 0px 2px 2px 0 #942718;
 }
-/* <-- */
 
-/* general dropdown styles --> */
+/* general dropdown styles */
 .dropdown {
   font-size: 14px;
   line-height: 16px;
@@ -118,9 +114,8 @@ a {
   background-color: #f8f7f4;
   box-shadow: 0px 20px 20px 0 rgba(0, 0, 0, 0.4);
 }
-/* <-- */
 
-/* general text input styles --> */
+/* general text input styles */
 .input {
   font-size: 16px;
   line-height: 24px;
@@ -154,9 +149,8 @@ a {
   font-weight: 400;
   color: #999999;
 }
-/* <-- */
 
-/* navigation --> */
+/* navigation */
 .main-menu__list,
 .submenu,
 .user-menu {
@@ -285,8 +279,8 @@ a {
 
   border-top: 1px solid #cacac7;
 }
-/* <-- */
 
+/* header contacts */
 .main-header__schedule {
   margin: 0;
 
@@ -302,7 +296,7 @@ a {
   color: #ffffff;
 }
 
-/* slider --> */
+/* slider */
 .slider__item {
   text-align: center;
 }
@@ -327,9 +321,8 @@ a {
   font-size: 32px;
   line-height: 44px;
 }
-/* <-- */
 
-/* promo --> */
+/* promo */
 .promo__list {
   margin: 0;
   padding: 0;
@@ -368,9 +361,8 @@ a {
   font-size: 18px;
   line-height: 22px;
 }
-/* <-- */
 
-/* advantages --> */
+/* advantages */
 .advantages {
   color: #323232;
 
@@ -392,9 +384,8 @@ a {
 
   list-style: none;
 }
-/* <-- */
 
-/* blog-news --> */
+/* blog-news */
 .blog-news {
   color: #323232;
 
@@ -420,9 +411,8 @@ a {
 
   border: none;
 }
-/* <-- */
 
-/* subscription --> */
+/* subscription */
 .subscription {
   font-size: 16px;
   line-height: 22px;
@@ -437,9 +427,8 @@ a {
 .subscription__wrapper {
   background-color: #f8f7f4;
 }
-/* <-- */
 
-/* contacts --> */
+/* contacts */
 .contacts__map {
   height: 430px;
 
@@ -473,9 +462,8 @@ a {
   font-weight: 700;
   color: #323232;
 }
-/* <-- */
 
-/* main footer --> */
+/* main footer */
 .social-buttons {
   margin: 0;
 
@@ -539,7 +527,6 @@ a {
   line-height: 18px;
   font-weight: 400;
 }
-/* <-- */
 
 /* modal popup */
 .modal-feedback {
@@ -555,9 +542,8 @@ a {
   line-height: 28px;
   font-weight: 500;
 }
-/* <-- */
 
-/* breadcrumbs --> */
+/* breadcrumbs */
 .breadcrumbs {
   margin: 0;
   padding: 0;
@@ -568,9 +554,8 @@ a {
 
   list-style: none;
 }
-/* <-- */
 
-/* page headers <h1> --> */
+/* page headers <h1> */
 .page-title {
   margin: 0;
 
@@ -579,9 +564,8 @@ a {
   font-weight: 700;
   color: #ffffff;
 }
-/* <-- */
 
-/* product cards --> */
+/* product cards */
 .products__list{
   margin: 0;
   padding: 0;
@@ -618,4 +602,3 @@ a {
   background-color: rgba(248, 247, 244, 0.2);
   box-shadow: 0px 20px 20px 0 rgba(0, 0, 0, 0.3);
 }
-/* <-- */
