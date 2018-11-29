@@ -360,9 +360,8 @@ a {
   color: #323232;
 
   background-color: #ebdec4;
-  background-image: url("../img/waffle-bg.jpg");
-  background-repeat: no-repeat;
-  background-size: cover;
+  background-image: url("../img/waffle-pt.jpg");
+  background-repeat: repeat;
 }
 
 .advantages__title {
