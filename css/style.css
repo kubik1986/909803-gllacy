@@ -30,18 +30,18 @@ a {
   outline: none;
 }
 
-/* main wrappers --> */
-.wrapper {
+/* main containers --> */
+.container {
   margin: 0 auto;
   padding: 0 27px;
   width: 1200px;
 }
 
-.wrapper--products {
+.container--products {
   padding: 0 14px;
 }
 
-.wrapper--contacts {
+.container--contacts {
   padding: 0;
 }
 /* <-- */
@@ -132,11 +132,13 @@ a {
 }
 
 .input:hover {
-  border: 2px solid rgba(154, 154, 154, 0.52);
+  border-color: rgba(154, 154, 154, 0.52);
+  box-shadow: inset 0 0 0 1px rgba(154, 154, 154, 0.52);
 }
 
 .input:focus {
-  border: 2px solid rgba(46, 136, 228, 0.52);
+  border-color: rgba(46, 136, 228, 0.52);
+  box-shadow: inset 0 0 0 1px rgba(46, 136, 228, 0.52);
   outline: none;
 }
 
@@ -164,30 +166,47 @@ a {
   list-style: none;
 }
 
-.main-menu__link,
-.main-menu__link-current {
+.main-menu__link {
   font-size: 16px;
   line-height: 18px;
   font-weight: 700;
   color: #ffffff;
 }
 
-.main-menu__link-current {
-  background-color: #d07058;
+.main-menu__link::after {
+  display: block;
+  height: 1px;
+  content: "";
+
+  background-color: rgba(255, 255, 255, 0.3);
 }
 
-.main-menu__link:hover,
-.main-menu__link-current:hover {
+.main-menu__link:hover {
   color: #323232;
 
   background-color: #f7f6f3;
 }
 
-.main-menu__link:active,
-.main-menu__link-current:active {
-  border-bottom: none;
+.main-menu__link:hover::after {
+  background-color: transparent;
+}
+
+.main-menu__link:active {
   background-color: #ededed;
   box-shadow: inset 0px 2px 1px 0 #696969;
+}
+
+.main-menu__link--current,
+.main-menu__link--current:hover,
+.main-menu__link--current:active {
+  color: #ffffff;
+
+  background-color: #d07058;
+  box-shadow: none;
+}
+
+.main-menu__link--current::after {
+  background-color: transparent;
 }
 
 .submenu__link {
@@ -200,13 +219,6 @@ a {
 .submenu__item:first-child .submenu__link {
   font-weight: 700;
 }
-
-.submenu__link--current {
-  color: #ffffff;
-
-  background-color: #d07058;
-}
-
 .submenu__link:hover {
   background-color: #fbded7;
 }
@@ -215,9 +227,12 @@ a {
   background-color: #f6b5a5;
 }
 
+.submenu__link--current,
 .submenu__link--current:hover,
 .submenu__link--current:active {
-  color: #323232;
+  color: #ffffff;
+
+  background-color: #d07058;
 }
 
 .user-menu__button {
