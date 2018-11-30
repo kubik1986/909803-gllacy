@@ -559,7 +559,6 @@ a {
 }
 
 .breadcrumbs__item:not(:last-child)::after {
-  display: block;
   margin: 0 10px;
   content: "»";
 }
@@ -622,7 +621,6 @@ a {
 
 .pagination__link,
 .pagination__dir {
-
   font-size: 16px;
   line-height: 18px;
   font-weight: 500;
@@ -663,7 +661,7 @@ a {
 
 .filters-form__legend--price {
   float: left;
-  margin-right: 7px;
+  margin-right: 5px;
 }
 
 .filters-form__field,
@@ -712,7 +710,7 @@ a {
 .filters-form__price {
   margin: 0;
   padding: 0;
-  width: 30px;
+  width: 25px;
 
   font: inherit;
   color: inherit;
