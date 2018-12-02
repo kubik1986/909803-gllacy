@@ -22,7 +22,7 @@
 
     <header class="main-header">
       <div class="container">
-        <a class="visually-hidden visually-hidden-focusable link" href="#main">Перейти к основному контенту</a>
+        <a class="visually-hidden visually-hidden-focusable skip-link" href="#main">Перейти к основному контенту</a>
         <nav class="main-menu">
           <a  class="main-header__logo" href="index.html"><img src="img/logo.svg" alt="Логотип сайта магазина мороженого «Глэйси». Переход на главную страницу" width="154" height="64"></a>
           <ul class="main-menu__list" aria-label="главное меню">
@@ -114,8 +114,10 @@
             </li>
           </ul>
         </nav>
-        <p class="main-header__schedule">С 10 до 20, ежедневно</p>
-        <a class="main-header__phone-number" href="tel:+78124502525" aria-label="контактный телефон 8 812 450 25 25">8 812 450-25-25</a>
+        <div class="main-header__contacts">
+          <p class="main-header__schedule">С 10 до 20, ежедневно</p>
+          <a class="main-header__phone-number" href="tel:+78124502525" aria-label="контактный телефон 8 812 450 25 25">8 812 450-25-25</a>
+        </div>
       </div>
     </header>
 
@@ -148,7 +150,7 @@
                 <label class="visually-hidden" for="max-price-field">до</label>
                 <input class="filters-form__price" type="number" name="max-price" id="max-price-field" min="80" max="700" value="500"> руб.
               </div>
-              <div class="filters-form__field">
+              <div class="filters-form__field filters-form__field--slider">
                 <div class="slider-contoller">
                   <div class="slider-contoller__scale">
                     <div class="slider-contoller__current-range"></div>
@@ -181,7 +183,7 @@
             </fieldset>
             <fieldset class="filters-form__filter">
               <legend class="filters-form__legend">Наполнители:</legend>
-              <ul class="filters-form__field">
+              <ul class="filters-form__field filters-form__field--fillers">
                 <li class="filters-form__option">
                   <input class="visually-hidden" type="checkbox" name="fillers" id="fillers-checkbox-1" value="chocolate" checked>
                   <label class="filters-form__label filters-form__label--checkbox" for="fillers-checkbox-1">шоколадные</label>
@@ -292,6 +294,7 @@
             <li class="pagination__item"><a class="pagination__link" href="#">2</a></li>
             <li class="pagination__item"><a class="pagination__link" href="#">3</a></li>
             <li class="pagination__item"><a class="pagination__link" href="#">4</a></li>
+            <li class="pagination__item"><a class="pagination__link" href="#">5</a></li>
             <li class="pagination__item"><a class="pagination__dir pagination__dir--next" href="#">Вперёд</a></li>
           </ul>
         </section>

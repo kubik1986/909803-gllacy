@@ -21,9 +21,9 @@
     </div>
 
 
-    <header class="main-header">
+    <header class="main-header main-header--index">
       <div class="container">
-        <a class="visually-hidden visually-hidden-focusable link" href="#main">Перейти к основному контенту</a>
+        <a class="visually-hidden visually-hidden-focusable skip-link" href="#main">Перейти к основному контенту</a>
         <nav class="main-menu">
           <a class="main-header__logo"><img src="img/logo.svg" alt="Логотип сайта магазина мороженого «Глэйси»" width="154" height="64"></a>
           <ul class="main-menu__list" aria-label="главное меню">
@@ -89,8 +89,10 @@
             </li>
           </ul>
         </nav>
-        <p class="main-header__schedule">С 10 до 20, ежедневно</p>
-        <a class="main-header__phone-number" href="tel:+78124502525" aria-label="контактный телефон 8 812 450 25 25">8 812 450-25-25</a>
+        <div class="main-header__contacts">
+          <p class="main-header__schedule">С 10 до 20, ежедневно</p>
+          <a class="main-header__phone-number" href="tel:+78124502525" aria-label="контактный телефон 8 812 450 25 25">8 812 450-25-25</a>
+        </div>
       </div>
     </header>
 
@@ -107,17 +109,17 @@
           <ul class="slider__list" aria-label="слайды с новинками">
             <li class="slider__item slider__item-1">
               <h3 class="slider__title">Крем-брюле и пломбир с малиновым джемом</h3>
-              <img src="img/slide-1.png" alt="Крем-брюле и пломбир с малиновым джемом" width="1045" height="881">
+              <img class="slider__image" src="img/slide-1.png" alt="Крем-брюле и пломбир с малиновым джемом" width="1045" height="881">
               <a href="#" class="button slider__button" aria-label="купить крем-брюле и пломбир с малиновым джемом">Давайте оба!</a>
             </li>
             <li class="slider__item slider__item-2">
               <h3 class="slider__title">Шоколадный пломбир и лимонный сорбет</h3>
-              <img src="img/slide-2.png" alt="Шоколадный пломбир и лимонный сорбет" width="1065" height="859">
+              <img class="slider__image" src="img/slide-2.png" alt="Шоколадный пломбир и лимонный сорбет" width="1065" height="859">
               <a href="#" class="button slider__button" aria-label="купить шоколадный пломбир и лимонный сорбет">Давайте оба!</a>
             </li>
             <li class="slider__item slider__item-3">
-              <h3 class="slider__title">Пломбир с помадкой и клубничный щербет</h3>
-              <img src="img/slide-3.png" alt="Пломбир с помадкой и клубничный щербет" width="1079" height="854">
+              <h3 class="slider__title">Пломбир с помадкой и&nbsp;клубничный щербет</h3>
+              <img class="slider__image" src="img/slide-3.png" alt="Пломбир с помадкой и клубничный щербет" width="1079" height="854">
               <a href="#" class="button slider__button" aria-label="купить пломбир с помадкой и клубничный щербет">Давайте оба!</a>
             </li>
           </ul>
@@ -141,7 +143,7 @@
       </div>
 
       <div class="container container--products">
-        <section class="products">
+        <section class="products products--index">
           <h2 class="visually-hidden">Хиты продаж</h2>
           <ul class="products__list" aria-label="хиты продаж">
             <li class="product product--hit">
@@ -184,22 +186,24 @@
           </ul>
         </section>
 
-        <article class="blog-news">
-          <h2 class="blog-news__title">Новое в нашем блоге</h2>
-          <a class="blog-news__preview link-dark" href="blog.html">10 способов сервировки фруктовых щербетов к столу</a>
-        </article>
+        <div class="wrapper-columns">
+          <article class="blog-news">
+            <h2 class="blog-news__title">Новое в нашем блоге</h2>
+            <a class="blog-news__preview link-dark" href="blog.html">10 способов сервировки фруктовых щербетов к столу</a>
+          </article>
 
-        <section class="subscription">
-          <div class="subscription__wrapper">
-            <h2 class="visually-hidden">Подписка на рассылку</h2>
-            <p class="subscription__title">Подпишитесь на нашу сладкую рассылку и будете всегда в курсе всего самого вкусного, что у нас происходит. Обещаем не спамить и не слать всякой ненужной ерунды. Честно =)</p>
-            <form class="subscription__form" action="https://echo.htmlacademy.ru" method="post">
-              <label class="visually-hidden" for="email-subscription-field">Электронная почта для получения рассылки</label>
-              <input class="subscription__input input" type="email" name="email-subscription" id="email-subscription-field" placeholder="Электронная почта" required>
-              <button type="submit" class="button subscription__button">Отправить</button>
-            </form>
-          </div>
-        </section>
+          <section class="subscription">
+            <div class="subscription__wrapper">
+              <h2 class="visually-hidden">Подписка на рассылку</h2>
+              <p class="subscription__title">Подпишитесь на нашу сладкую рассылку и будете всегда в курсе всего самого вкусного, что у нас происходит. Обещаем не спамить и не слать всякой ненужной ерунды. Честно =)</p>
+              <form class="subscription__form" action="https://echo.htmlacademy.ru" method="post">
+                <label class="visually-hidden" for="email-subscription-field">Электронная почта для получения рассылки</label>
+                <input class="subscription__input input" type="email" name="email-subscription" id="email-subscription-field" placeholder="Электронная почта" required>
+                <button type="submit" class="button subscription__button">Отправить</button>
+              </form>
+            </div>
+          </section>
+        </div>
       </div>
 
       <div class="container container--contacts">
@@ -256,7 +260,7 @@
         </div>
         <div class="modal-feedback__row">
           <label class="visually-hidden" for="message-field">Ваше сообщение</label>
-          <textarea class="feedback-form__textarea input" name="message" id="message-field" rows="8" placeholder="Напишите что-нибудь..." required></textarea>
+          <textarea class="feedback-form__textarea input" name="message" id="message-field" placeholder="Напишите что-нибудь..." required></textarea>
         </div>
         <button type="submit" class="button feedback-form__button">Отправить</button>
       </form>
