@@ -74,10 +74,14 @@ a {
   padding: 0;
 }
 
-.wrapper-columns
- {
+.row {
   display: flex;
+  flex-wrap: wrap;
   justify-content: space-between;
+ }
+
+ .row__item {
+   margin-bottom: 40px;
  }
 
 /* general link styles */
@@ -686,8 +690,6 @@ a {
 /* contacts */
 .contacts {
   position: relative;
-
-  margin-top: 39px;
 }
 
 .contacts__map {
