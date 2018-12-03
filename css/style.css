@@ -1059,7 +1059,7 @@ a {
 }
 
 .pagination__item:not(:first-child):not(:last-child) {
-  margin: 0 2px;
+  margin: 0 2px 0 1px;
 }
 
 .pagination__link,
@@ -1073,7 +1073,8 @@ a {
 .pagination__link {
   display: block;
 
-  padding: 4px 8px 4px 8px;
+  padding: 4px 8px;
+  min-width: 26px;
 
   border-radius: 13px / 50%;
 }
