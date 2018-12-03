@@ -114,20 +114,20 @@ a {
 /* skip-link styles */
 .main-header .skip-link {
   position: absolute;
-  top: 9px;
-  left: -155px;
+  top: 80px;
+  left: 20px;
+  z-index: 100;
 
   display: block;
   padding: 10px 17px;
-  width: 175px;
 
   font-size: 14px;
   line-height: 20px;
   font-weight: 500;
   color: #ffffff;
 
-  border-radius: 30px / 50%;
-  background-color: rgba(255, 255, 255, 0.2);
+  border-radius: 20px / 50%;
+  background-color: #d07058;
   box-shadow: 0 1px 10px 0 rgba(0, 0, 0, 0.1);
 }
 
