@@ -129,7 +129,8 @@ a {
 
 /* general button styles */
 .button {
-  display: block;
+  display: inline-block;
+  vertical-align: middle;
   padding: 10px 17px;
 
   font-size: 18px;
@@ -895,6 +896,7 @@ a {
 }
 
 .feedback-form__button {
+  display: block;
   margin-left: auto;
   padding: 10px 24px;
 }
