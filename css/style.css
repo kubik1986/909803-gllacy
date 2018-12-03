@@ -769,6 +769,8 @@ a {
 
 .social-buttons {
   display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
 
   margin: 35px 72px 0 1px;
   padding: 0;
@@ -777,8 +779,9 @@ a {
   list-style: none;
 }
 
-.social-buttons__item:not(:last-child) {
+.social-buttons__item {
   margin-right: 11px;
+  margin-bottom: 10px;
 }
 
 .social-buttons__link {
