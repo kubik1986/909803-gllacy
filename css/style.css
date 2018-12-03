@@ -861,10 +861,27 @@ a {
   font-weight: 400;
 }
 
+/* overlay */
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 10000;
+
+  display: none;
+  align-items: center;
+
+  width: 100vw;
+  height: 100vh;
+
+  background-color: rgba(0, 0, 0, 0.3);
+}
+
 /* modal popup */
 .modal-feedback {
-  position: absolute;
+  position: relative;
 
+  margin: 0 auto;
   padding: 16px 26px 27px 24px;
   width: 478px;
 
