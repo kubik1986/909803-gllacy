@@ -446,23 +446,15 @@ a {
 .slider__item {
   position: relative;
 
-  display: flex;
+  display: none;
   flex-direction: column;
   align-items: center;
 
   height: 900px;
 }
 
-/* .slider__item-1 {
-  display: none;
-} */
-
-.slider__item-2 {
-  display: none;
-}
-
-.slider__item-3 {
-  display: none;
+.slider__item--current {
+  display: flex;
 }
 
 .slider__title {
