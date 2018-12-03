@@ -252,6 +252,7 @@ a {
 
 .main-menu {
   display: flex;
+  align-items: flex-start;
 }
 
 .main-header__logo {
@@ -261,8 +262,10 @@ a {
 
 .main-menu__list {
   display: flex;
+  flex-wrap: wrap;
 
   margin-top: 23px;
+  width: 600px;
 }
 
 .main-menu__item {
@@ -340,9 +343,11 @@ a {
 
 .user-menu {
   display: flex;
+  justify-content: flex-end;
 
   margin-top: 23px;
   margin-left: auto;
+  width: 350px;
 }
 
 .user-menu__item {
