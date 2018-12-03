@@ -824,7 +824,7 @@ a {
   margin: 0;
   margin-top: 34px;
   padding: 0;
-  width: 336px;
+  width: 400px;
 
   font-size: 13px;
   line-height: 18px;
@@ -835,14 +835,8 @@ a {
 
 .footer-menu__item {
   margin-bottom: 5px;
-}
-
-.footer-menu__item:nth-child(odd) {
-  width: 143px;
-}
-
-.footer-menu__item:nth-child(even) {
-  width: 193px;
+  margin-right: 13px;
+  min-width: 130px;
 }
 
 .link--favorite {
