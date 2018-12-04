@@ -1118,8 +1118,6 @@ a {
 .filters-form {
   display: flex;
   flex-wrap: wrap;
-
-  width: 1000px;
 }
 
 .filters-form__filter {
@@ -1132,7 +1130,7 @@ a {
   border: none;
 }
 
-.filters-form__filter:not(:nth-child(3n)) {
+.filters-form__filter {
   margin-right: 14px;
 }
 
@@ -1278,10 +1276,7 @@ a {
 .filters-form__field--fillers .filters-form__option {
   margin-right: 21px;
   padding-left: 32px;
-}
-
-.filters-form__field--fillers .filters-form__option:nth-child(3) {
-  margin-right: 24px;
+  min-width: 90px;
 }
 
 .filters-form__option:last-child {
