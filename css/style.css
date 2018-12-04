@@ -438,7 +438,7 @@ a {
 .slider {
   position: relative;
 
-  margin-bottom: -253px;
+  margin-bottom: 41px;
 }
 
 .slider__controls {
@@ -460,9 +460,10 @@ a {
 
   display: none;
   flex-direction: column;
+  justify-content: flex-end;
   align-items: center;
 
-  height: 900px;
+  height: 606px;
 }
 
 .slider__item--current {
@@ -470,7 +471,6 @@ a {
 }
 
 .slider__title {
-  margin-top: auto;
   margin-bottom: 31px;
   width: 675px;
 
@@ -492,8 +492,7 @@ a {
 }
 
 .slider__button {
-  margin-bottom: 294px;
-  padding: 10px 41px;
+  padding: 9px 41px 11px;
 
   font-size: 32px;
   line-height: 44px;
@@ -503,9 +502,6 @@ a {
 
 /* promo */
 .promo {
-  position: relative;
-  z-index: 1;
-
   margin-bottom: 34px;
 }
 
