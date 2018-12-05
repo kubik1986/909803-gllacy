@@ -788,6 +788,11 @@ a {
 .contacts {
   position: relative;
 
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+
+  padding: 62px 27px;
   min-height: 430px;
 }
 
@@ -802,13 +807,6 @@ a {
 
   background: url("../img/map.png") no-repeat;
   background-size: cover;
-}
-
-.contacts__legend-wrapper {
-  display: flex;
-  justify-content: flex-end;
-
-  padding: 62px 27px;
 }
 
 .contacts__legend {
