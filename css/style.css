@@ -92,7 +92,8 @@ a {
 }
 
 .link:hover,
-.link:active {
+.link:active,
+.link:focus {
   color: #ffbc9e;
 
   border-bottom-color: rgba(255, 188, 158, 0.3);
@@ -105,7 +106,8 @@ a {
 }
 
 .link-dark:hover,
-.link-dark:active {
+.link-dark:active,
+.link-dark:focus {
   color: #e84d37;
 
   border-bottom-color: rgba(232, 77, 55, 0.3);
@@ -152,7 +154,8 @@ a {
   cursor: pointer;
 }
 
-.button:hover {
+.button:hover,
+.button:focus {
   background-color: #f2836d;
   background-image:
    linear-gradient(to bottom, rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0.2)),
@@ -895,7 +898,8 @@ a {
   background-image: url("../img/vk.svg");
 }
 
-.social-buttons__link:hover {
+.social-buttons__link:hover,
+.social-buttons__link:focus {
   border-color: rgba(255, 255, 255, 0.7);
   opacity: 1;
 }
@@ -1135,12 +1139,27 @@ a {
   box-shadow: 0 20px 20px 0 rgba(0, 0, 0, 0.3);
 }
 
+.product:focus-within {
+  z-index: 10;
+
+  background-color: rgba(248, 247, 244, 0.2);
+  box-shadow: 0 20px 20px 0 rgba(0, 0, 0, 0.3);
+}
+
 .product:hover .product__button {
+  display: block;
+}
+
+.product:focus-within .product__button {
   display: block;
 }
 
 .product:hover .product__name {
   margin-bottom: 8px; /* pulls opened product card's height (with button) to the normal height */
+}
+
+.product:focus-within .product__name {
+  margin-bottom: 8px;
 }
 
 /* pagination */
@@ -1180,13 +1199,15 @@ a {
   border-radius: 13px / 50%;
 }
 
-.pagination__link:hover {
+.pagination__link:hover,
+.pagination__link:focus {
   background-color: rgba(255, 255, 255, 0.2);
 }
 
 .pagination__link:active,
 .pagination__link--current,
-.pagination__link--current:hover {
+.pagination__link--current:hover,
+.pagination__link--current:focus {
   color: #323232;
 
   background-color: #ffffff;
@@ -1385,7 +1406,8 @@ a {
   box-shadow: inset 0 0 0 2px #ffffff;
 }
 
-.filters-form__button:hover {
+.filters-form__button:hover,
+.filters-form__button:focus {
   color: #323232;
 
   background-color: #ffffff;
