@@ -544,6 +544,7 @@ a {
 .slider__list {
   margin: 0;
   padding: 0;
+  height: 606px;
 
   list-style: none;
 }
@@ -556,7 +557,7 @@ a {
   justify-content: flex-end;
   align-items: center;
 
-  height: 606px;
+  height: 100%;
 }
 
 .slider__item--current {
