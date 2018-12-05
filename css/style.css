@@ -787,14 +787,11 @@ a {
 .contacts {
   position: relative;
 
-  padding-top: 1px;
-  padding-bottom: 1px;
   min-height: 430px;
 }
 
 .contacts__map {
   position: absolute;
-  top: 0;
   z-index: -1;
 
   width: 100%;
@@ -804,12 +801,19 @@ a {
   background-size: cover;
 }
 
+.contacts__legend-wrapper {
+  display: flex;
+  justify-content: flex-end;
+
+  padding: 62px 27px;
+}
+
 .contacts__legend {
   display: flex;
   flex-direction: column;
 
-  margin: 61px 27px 61px 871px;
   padding: 29px 25px 31px;
+  width: 302px;
 
   color: #323232;
   border-radius: 15px;
