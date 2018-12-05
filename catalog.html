@@ -41,11 +41,11 @@
           </ul>
           <ul class="user-menu" aria-label="меню пользователя">
             <li class="user-menu__item">
-              <button class="user-menu__button" type="submit" form="search-form">
+              <button class="user-menu__button user-menu__button--search" type="submit" form="search-form">
                 <svg class="user-menu__icon" width="17" height="17" aria-hidden="true">
                   <use xlink:href="#search-icon"/>
                 </svg>
-                Поиск по сайту
+                <span class="visually-hidden">Поиск по сайту</span>
               </button>
               <form class="search-form dropdown" id="search-form" action="https://echo.htmlacademy.ru" method="get">
                 <label class="visually-hidden" for="search-field">Поле поиска</label>
@@ -57,8 +57,7 @@
               <a class="user-menu__button" href="#" aria-label="вход в личный кабинет">
                 <svg class="user-menu__icon" width="21" height="19" aria-hidden="true">
                   <use xlink:href="#entrance-icon"/>
-                </svg>
-                Вход
+                </svg>Вход
               </a>
               <form class="login-form dropdown" action="https://echo.htmlacademy.ru" method="post">
                 <div class="login-form__row">
@@ -82,8 +81,7 @@
               <a class="user-menu__button user-menu__button--full-basket" href="#" aria-label="корзина 2 товара">
                 <svg class="user-menu__icon" width="21" height="20" aria-hidden="true">
                   <use xlink:href="#basket-icon--full"/>
-                </svg>
-                2 товара
+                </svg>2 товара
               </a>
               <div class="basket-form dropdown">
                 <table class="basket-form__table">
