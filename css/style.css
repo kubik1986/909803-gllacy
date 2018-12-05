@@ -955,14 +955,15 @@ a {
   font-weight: 400;
 }
 
-/* overlay */
-.overlay {
+/* modal overlay */
+.modal-overlay {
   position: fixed;
   top: 0;
   left: 0;
   z-index: 10000;
 
   display: none;
+  justify-content: center;
   align-items: center;
 
   width: 100vw;
@@ -975,7 +976,6 @@ a {
 .modal-feedback {
   position: relative;
 
-  margin: 0 auto;
   padding: 16px 26px 27px 24px;
   width: 478px;
 
