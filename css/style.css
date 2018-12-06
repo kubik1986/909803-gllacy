@@ -764,7 +764,7 @@ a {
 
 /* blog-news */
 .blog-news {
-  padding: 23px 20px 23px;
+  padding: 23px 20px;
   width: 560px;
 
   color: #323232;
@@ -778,7 +778,7 @@ a {
 
 .blog-news__title {
   margin: 0;
-  margin-bottom: 5px;
+  margin-bottom: 4px;
 
   font-size: 16px;
   line-height: 22px;
@@ -820,7 +820,7 @@ a {
   flex-direction: column;
   justify-content: space-between;
 
-  padding: 30px 21px 35px;
+  padding: 29px 21px 35px;
   width: 550px;
 
   border-radius: 10px;
@@ -844,7 +844,7 @@ a {
 }
 
 .subscription__button {
-  padding: 8px 19px 12px;
+  padding: 9px 18px 11px;
 }
 
 /* contacts */
