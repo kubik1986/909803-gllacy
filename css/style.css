@@ -204,8 +204,7 @@ a {
 
 /* general text input styles */
 .input {
-  padding: 9px 14px;
-  height: 44px;
+  padding: 8px 14px 10px;
 
   font-size: 16px;
   line-height: 24px;
@@ -233,10 +232,13 @@ a {
   font-weight: 400;
   color: #999999;
 }
+
 ::-moz-placeholder { /* Firefox 19+ */
   font-weight: 400;
   color: #999999;
+  opacity: 1;
 }
+
 :-ms-input-placeholder { /* IE 10+ */
   font-weight: 400;
   color: #999999;
