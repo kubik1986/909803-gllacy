@@ -693,7 +693,7 @@ a {
 /* advantages */
 .advantages {
   margin-bottom: 40px;
-  padding: 25px 20px 25px;
+  padding: 25px 20px 23px;
 
   font-weight: 500;
   color: #323232;
@@ -723,12 +723,43 @@ a {
 }
 
 .advantages__item {
+  position: relative;
+
   margin-top: 22px;
   padding-left: 56px;
   width: 540px;
 
   font-size: 16px;
   line-height: 22px;
+}
+
+.advantages__item::before {
+  position: absolute;
+  top: -14px;
+  left: 0;
+
+  width: 49px;
+  height: 49px;
+  content: "";
+
+  background-position: 50% 50%;
+  background-size: cover;
+}
+
+.advantages__item--production::before {
+  background-image: url("../img/ice-cream.svg")
+}
+
+.advantages__item--suppliers::before {
+  background-image: url("../img/cow.svg")
+}
+
+.advantages__item--ingredients::before {
+  background-image: url("../img/eco.svg")
+}
+
+.advantages__item--shipment::before {
+  background-image: url("../img/thermometer.svg")
 }
 
 /* blog-news */
