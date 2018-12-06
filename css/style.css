@@ -936,7 +936,7 @@ a {
   flex-wrap: wrap;
   align-items: flex-start;
 
-  margin: 35px 72px 0 1px;
+  margin: 36px 72px 0 0;
   padding: 0;
   width: 350px;
 
@@ -949,10 +949,18 @@ a {
 }
 
 .social-buttons__link {
+  display: block;
+  width: 38px;
+  height: 38px;
+
   color: #ffffff;
 
   border: 3px solid rgba(255, 255, 255, 0.625);
+  border-radius: 50%;
   background-repeat: no-repeat;
+  background-position: 50% 50%;
+  background-size: cover;
+  box-shadow: inset 0 0 0 1px #ffffff; /* hide rendering bug with background image edge */
   opacity: 0.8;
 }
 
