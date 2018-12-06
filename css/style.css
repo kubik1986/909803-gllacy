@@ -1125,6 +1125,18 @@ a {
   border-radius: 7px;
 }
 
+.product--hit::before {
+  position: absolute;
+  top: 6px;
+  left: 13px;
+
+  width: 61px;
+  height: 61px;
+  content: "";
+
+  background: url("../img/hit.svg");
+}
+
 .product__photo {
   order: -1;
 
