@@ -630,12 +630,9 @@ a {
 }
 
 /* promo */
-.promo {
-  margin-bottom: 34px;
-}
-
 .promo__list {
   display: flex;
+  flex-wrap: wrap;
   justify-content: space-between;
 
   margin: 0;
@@ -648,7 +645,8 @@ a {
   display: flex;
   flex-direction: column;
 
-  padding: 16px 20px 24px;
+  margin-bottom: 34px;
+  padding: 16px 20px 23px;
   width: 560px;
 
   font-weight: 700;
@@ -679,7 +677,7 @@ a {
 
 .promo__description {
   margin: 0;
-  margin-bottom: 45px;
+  margin-bottom: 44px;
 
   font-size: 18px;
   line-height: 22px;
