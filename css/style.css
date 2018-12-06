@@ -245,10 +245,6 @@ a {
 }
 
 /* main header */
-.main-header {
-  margin-bottom: 19px;
-}
-
 .main-header--index {
   position: absolute;
   top: 0;
@@ -270,6 +266,8 @@ a {
 .main-menu {
   display: flex;
   align-items: flex-start;
+
+  padding-bottom: 20px;
 }
 
 .main-header__logo {
@@ -425,6 +423,7 @@ a {
 
   display: block;
   padding: 8px 17px 8px 44px;
+  min-height: 32px;
 
   font-size: 14px;
   line-height: 16px;
@@ -440,7 +439,6 @@ a {
 .user-menu__button--search {
   padding: 0;
   width: 32px;
-  height: 32px;
 }
 
 .user-menu__button--search .user-menu__icon {
