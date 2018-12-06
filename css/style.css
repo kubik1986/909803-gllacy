@@ -877,7 +877,7 @@ a {
   display: flex;
   flex-direction: column;
 
-  padding: 29px 25px 31px;
+  padding: 31px 25px;
   width: 302px;
 
   color: #323232;
@@ -890,15 +890,19 @@ a {
   flex-direction: column;
 
   margin: 0;
-  margin-bottom: 22px;
+  margin-bottom: 18px;
 
   font-size: 14px;
   line-height: 20px;
   font-weight: 400;
 }
 
+.contacts__section:last-of-type {
+  margin-bottom: 23px;
+}
+
 .contacts__title {
-  margin-bottom: 2px;
+  /* margin-bottom: 1px; */
   width: 150px;
 }
 
