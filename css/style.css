@@ -1282,20 +1282,25 @@ a {
 .pagination {
   display: flex;
   flex-wrap: wrap;
+  justify-content: flex-end;
 
-  margin: 49px 13px 0;
+  margin: 48px 13px 0;
   padding: 0 0 30px;
 
   border-bottom: 1px solid rgba(255, 255, 255, 0.3);
   list-style: none;
 }
 
-.pagination__item:first-child {
-  margin-left: auto;
-}
-
 .pagination__item:not(:first-child):not(:last-child) {
   margin: 0 2px 0 1px;
+}
+
+.pagination__item:first-child {
+  margin-right: 4px;
+}
+
+.pagination__item:last-child {
+  margin-left: 6px;
 }
 
 .pagination__link,
@@ -1327,6 +1332,38 @@ a {
   color: #323232;
 
   background-color: #ffffff;
+}
+
+.pagination__dir {
+  position: relative;
+
+  display: block;
+  width: 16px;
+  height: 25px;
+}
+
+.pagination__dir::after {
+  position: absolute;
+  top: 9px;
+
+  width: 10px;
+  height: 10px;
+  content: "";
+
+  border-top: 2px solid #ffffff;
+  border-right: 2px solid #ffffff;
+}
+
+.pagination__dir--prev::after {
+  left: 0;
+
+  transform: rotate(-135deg);
+}
+
+.pagination__dir--next::after {
+  left: 4px;
+
+  transform: rotate(45deg);
 }
 
 .pagination__dir--disabled {
