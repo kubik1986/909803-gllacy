@@ -540,6 +540,40 @@ a {
   top: 563px;
   left: 0;
   z-index: 1;
+
+  display: flex;
+}
+
+.slider__toggle {
+  display: block;
+  margin-right: 8px;
+  width: 21px;
+  height: 21px;
+
+  background-color: transparent;
+
+  border: 2px solid #ffffff;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.slider__toggle:last-child {
+  margin-right:0;
+}
+
+.slider__toggle:hover,
+.slider__toggle:focus {
+  background-color: rgba(248, 247, 244, 0.4);
+}
+
+.slider__toggle:active {
+  background-color: #ffffff;
+}
+
+.slider__toggle--current,
+.slider__toggle--current:hover,
+.slider__toggle--current:focus {
+  background-color: #ffffff;
 }
 
 .slider__list {
