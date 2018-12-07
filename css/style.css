@@ -547,10 +547,60 @@ a {
   font-weight: 400;
 }
 
+.basket-form {
+  padding: 20px 15px;
+  width: 540px;
+
+  text-align: right;
+}
+
 .basket-form__table {
+  width: 100%;
+
   font-size: 13px;
   line-height: 16px;
   font-weight: 400;
+  text-align: left;
+
+  border-collapse: collapse;
+}
+
+.basket-form__table td {
+  vertical-align: top;
+}
+
+.basket-form__td-delete {
+  padding: 10px 14px 17px 0;
+  width: 4.9%;
+}
+
+.basket-form__td-photo {
+  padding: 0 14px 17px 0;
+  width: 9.2%;
+}
+
+.basket-form__td-product {
+  padding: 8px 30px 17px 0;
+  width: 48.4%;
+}
+
+.basket-form__td-price {
+  padding: 8px 14px 17px 0;
+  width: 24%;
+}
+
+.basket-form__td-subtotal {
+  padding: 8px 0 17px;
+  width: 13.5%;
+}
+
+.basket-form__btn-delete {
+  display: block;
+  width: 11px;
+  height: 11px;
+
+  background-image: url("../img/cross-small.svg");
+  cursor: pointer;
 }
 
 .basket-form__price {
@@ -563,7 +613,12 @@ a {
   font-weight: 700;
   text-align: right;
 
+  padding: 15px 0 13px;
   border-top: 1px solid #cacac7;
+}
+
+.basket-form__button {
+  padding: 10px 15px;
 }
 
 /* header contacts */
@@ -1182,7 +1237,6 @@ a {
   height: 17px;
 
   border: none;
-  background color: #323232;
   background: #f8f7f4 url("../img/cross-big.svg");
   cursor: pointer;
 }
