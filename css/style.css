@@ -516,8 +516,31 @@ a {
   box-shadow: none;
 }
 
+.login-form {
+  padding: 20px 18px;
+  width: 277px;
+}
+
+.login-form__row:not(:last-child) {
+  margin-bottom: 20px;
+}
+
+.login-form__row:last-child {
+  display: flex;
+  justify-content: space-between;
+}
+
+.login-form__input {
+  width: 100%;
+}
+
+.login-form__button {
+  padding: 10px 25px;
+}
+
 .login-form__account {
   margin: 0;
+  width: 120px;
 
   font-size: 13px;
   line-height: 24px;
