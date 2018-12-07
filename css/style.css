@@ -1372,7 +1372,7 @@ a {
 
 /* filters */
 .filters {
-  margin-bottom: 19px;
+  margin-bottom: 18px;
 }
 
 .filters-form {
@@ -1434,8 +1434,12 @@ a {
 }
 
 .filters-form__field--select {
-  padding: 8px 12px;
+  padding: 8px 16px;
   width: 194px;
+
+  background-image: url("../img/select-arrow-light.svg");
+  background-repeat: no-repeat;
+  background-position: 168px center;
 
   -webkit-appearance: none;
   -moz-appearance: none;
@@ -1446,13 +1450,14 @@ a {
   display: none;
 }
 
-.filters-form__field--select:hover {
-  color: #323232;
-}
-
+.filters-form__field--select:hover,
 .filters-form__field--select:focus {
   color: #323232;
 
+  background-image: url("../img/select-arrow-dark.svg");
+}
+
+.filters-form__field--select:focus {
   background-color: #ffffff;
 }
 
@@ -1500,16 +1505,16 @@ a {
 }
 
 .filters-form__field--slider {
-  padding: 9px 0 7px;
+  padding: 7px 0 8px;
 }
 
 .slider-contoller {
   position: relative;
 
   margin: 0 12px;
-  padding: 8px 10px 7px;
+  padding: 9px 10px;
   width: 196px;
-  height: 21px;
+  height: 22px;
 }
 
 .slider-contoller__scale {
@@ -1528,7 +1533,35 @@ a {
   opacity: 1;
 }
 
+.slider-contoller__grip {
+  position: absolute;
+  top: 1px;
+
+  width: 20px;
+  height: 20px;
+
+  border: 8px solid #ffffff;
+  border-radius: 50%;
+  background-color: #ababab;
+  box-shadow: 0 2px 0 0 #ababab;
+  cursor: pointer;
+}
+
+.slider-contoller__grip--min {
+  left: 23px;
+}
+
+.slider-contoller__grip--max {
+  right: 55px;
+}
+
+.slider-contoller__grip:hover {
+  transform: scale(1.12);
+}
+
 .filters-form__option {
+  position: relative;
+
   margin-right: 17px;
   padding-left: 32px;
 }
@@ -1541,6 +1574,54 @@ a {
 
 .filters-form__option:last-child {
   margin-right: 0;
+}
+
+.filters-form__label::before {
+  position: absolute;
+  left: 0;
+
+  content: "";
+
+  background-repeat: no-repeat;
+  background-position: 0 50%;
+  opacity: 0.8;
+}
+
+.filters-form__label--radio::before {
+  top: -2px;
+
+  width: 22px;
+  height: 22px;
+
+  border-radius: 50%;
+  background-image: url("../img/radio-off.svg")
+}
+
+.filters-form__label--checkbox::before {
+  top: -1px;
+
+  width: 20px;
+  height: 20px;
+
+  background-image: url("../img/checkbox-off.svg")
+}
+
+input[type="radio"]:checked + .filters-form__label::before {
+  background-image: url("../img/radio-on.svg")
+}
+
+input[type="checkbox"]:checked + .filters-form__label::before {
+  width: 24px;
+
+  background-image: url("../img/checkbox-on.svg");
+}
+input:disabled + .filters-form__label,
+input:disabled + .filters-form__label::before {
+  opacity: 0.4;
+}
+
+.filters-form__label:hover::before {
+  opacity: 1;
 }
 
 .filters-form__button {
