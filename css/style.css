@@ -299,7 +299,7 @@ a {
 
 .main-menu__link {
   display: block;
-  padding: 7px 14px;
+  padding: 7px 14px 6px;
 
   font-size: 16px;
   line-height: 18px;
@@ -361,7 +361,19 @@ a {
   background-color: transparent;
 }
 
+.submenu {
+  left: -7px;
+  right: auto;
+
+  padding: 4px 0;
+  min-width: 143px;
+}
+
 .submenu__link {
+  display: block;
+
+  padding: 7px 20px 8px;
+
   font-size: 14px;
   line-height: 16px;
   font-weight: 400;
@@ -371,6 +383,17 @@ a {
 .submenu__item:first-child .submenu__link {
   font-weight: 700;
 }
+
+.submenu__item:first-child::after {
+  display: block;
+  margin: 3px auto;
+  width: 90%;
+  height: 1px;
+  content: "";
+
+  background-color: #d3d3d2;
+}
+
 .submenu__link:hover,
 .submenu__link:focus {
   background-color: #fbded7;
