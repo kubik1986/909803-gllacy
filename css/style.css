@@ -498,6 +498,24 @@ a {
   fill: #ffffff;
 }
 
+.search-form {
+  padding: 20px 15px;
+  min-width: 340px;
+}
+
+.search-form__input {
+  width: 100%;
+}
+
+.search-form__button:focus {
+  position: absolute;
+  top: 20px;
+  right: 15px;
+
+  border-radius: 20px 5px 5px 20px;
+  box-shadow: none;
+}
+
 .login-form__account {
   margin: 0;
 
