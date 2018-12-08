@@ -347,7 +347,8 @@ a {
 
 .main-menu__link--current,
 .main-menu__item:hover .main-menu__link--current,
-.main-menu__link--current:active {
+.main-menu__link--current:active,
+.main-menu__link--current:focus {
   color: #ffffff;
 
   background-color: #d07058;
