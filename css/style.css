@@ -318,7 +318,8 @@ a {
   background-color: rgba(255, 255, 255, 0.3);
 }
 
-.main-menu__item:hover .main-menu__link {
+.main-menu__item:hover .main-menu__link,
+.main-menu__link:focus {
   color: #323232;
 
   background-color: #f7f6f3;
@@ -330,7 +331,8 @@ a {
   background-color: #f7f6f3;
 }
 
-.main-menu__item:hover .main-menu__link::after {
+.main-menu__item:hover .main-menu__link::after,
+.main-menu__link:focus::after {
   background-color: transparent;
 }
 
@@ -470,7 +472,8 @@ a {
 }
 
 .user-menu__button--full-basket .user-menu__icon,
-.user-menu__item:hover .user-menu__icon {
+.user-menu__item:hover .user-menu__icon,
+.user-menu__button:focus .user-menu__icon {
   fill: #323232;
 }
 
@@ -479,6 +482,7 @@ a {
 }
 
 .user-menu__item:hover .user-menu__button,
+.user-menu__button:focus,
 .user-menu__button--full-basket {
   color: #323232;
 
