@@ -51,7 +51,7 @@
               <form class="search-form dropdown" id="search-form" action="https://echo.htmlacademy.ru" method="get">
                 <label class="visually-hidden" for="search-field">Поле поиска</label>
                 <input class="search-form__input input" type="search" name="search" id="search-field" placeholder="Что ищем?" required>
-                <button type="submit" class="visually-hidden visually-hidden-focusable button search-form__button">Найти</button>
+                <button class="visually-hidden visually-hidden-focusable button search-form__button" type="submit">Найти</button>
               </form>
             </li>
             <li class="user-menu__item">
@@ -70,10 +70,10 @@
                   <input class="login-form__input input" type="password" name="password" id="password-field" placeholder="Пароль" required>
                 </div>
                 <div class="login-form__row">
-                  <button type="submit" class="button login-form__button">Войти</button>
+                  <button class="button login-form__button" type="submit">Войти</button>
                   <p class="login-form__account">
-                    <a href="#" class="link-dark">Забыли пароль?</a>
-                    <a href="#" class="link-dark">Новая регистрация</a>
+                    <a class="link-dark" href="#">Забыли пароль?</a>
+                    <a class="link-dark" href="#">Новая регистрация</a>
                   </p>
                 </div>
               </form>
@@ -114,17 +114,17 @@
             <li class="slider__item slider__item--current">
               <h3 class="slider__title">Крем-брюле и пломбир с малиновым джемом</h3>
               <img class="slider__image" src="img/slide-1.png" alt="Крем-брюле и пломбир с малиновым джемом" width="1045" height="881">
-              <a href="#" class="button slider__button" aria-label="купить крем-брюле и пломбир с малиновым джемом">Давайте оба!</a>
+              <a class="button slider__button" href="#" aria-label="купить крем-брюле и пломбир с малиновым джемом">Давайте оба!</a>
             </li>
             <li class="slider__item">
               <h3 class="slider__title">Шоколадный пломбир и лимонный сорбет</h3>
               <img class="slider__image" src="img/slide-2.png" alt="Шоколадный пломбир и лимонный сорбет" width="1065" height="859">
-              <a href="#" class="button slider__button" aria-label="купить шоколадный пломбир и лимонный сорбет">Давайте оба!</a>
+              <a class="button slider__button" href="#" aria-label="купить шоколадный пломбир и лимонный сорбет">Давайте оба!</a>
             </li>
             <li class="slider__item">
               <h3 class="slider__title">Пломбир с помадкой и&nbsp;клубничный щербет</h3>
               <img class="slider__image" src="img/slide-3.png" alt="Пломбир с помадкой и клубничный щербет" width="1079" height="854">
-              <a href="#" class="button slider__button" aria-label="купить пломбир с помадкой и клубничный щербет">Давайте оба!</a>
+              <a class="button slider__button" href="#" aria-label="купить пломбир с помадкой и клубничный щербет">Давайте оба!</a>
             </li>
           </ul>
         </section>
@@ -135,12 +135,12 @@
             <li class="promo__item promo__item--raspberry">
               <h3 class="promo__title">Малинка даром!</h3>
               <p class="promo__description">При покупке 2 кг любого фруктового мороженого добавим в ваш заказ банку малинового варенья бесплатно.</p>
-              <a href="#" class="promo__button button">Хочу варенье!</a>
+              <a class="button promo__button" href="#">Хочу варенье!</a>
             </li>
             <li class="promo__item promo__item--chocolate">
               <h3 class="promo__title">Шоколадки даром!</h3>
               <p class="promo__description">При покупке 2 кг пломбира добавим в ваш заказ упаковку вкуснейшей шоколадной присыпки совершенно бесплатно.</p>
-              <a href="#" class="promo__button button">Хочу шоколадки!</a>
+              <a class="button promo__button" href="#">Хочу шоколадки!</a>
             </li>
           </ul>
         </section>
@@ -203,7 +203,7 @@
               <form class="subscription__form" action="https://echo.htmlacademy.ru" method="post">
                 <label class="visually-hidden" for="email-subscription-field">Электронная почта для получения рассылки</label>
                 <input class="subscription__input input" type="email" name="email-subscription" id="email-subscription-field" placeholder="Электронная почта" required>
-                <button type="submit" class="button subscription__button">Отправить</button>
+                <button class="button subscription__button" type="submit">Отправить</button>
               </form>
             </div>
           </section>
@@ -275,7 +275,7 @@
             <label class="visually-hidden" for="message-field">Ваше сообщение</label>
             <textarea class="feedback-form__textarea input" name="message" id="message-field" placeholder="Напишите что-нибудь..." required></textarea>
           </div>
-          <button type="submit" class="button feedback-form__button">Отправить</button>
+          <button class="button feedback-form__button" type="submit">Отправить</button>
         </form>
         <button class="modal-feedback__close-button">
           <span class="visually-hidden">Закрыть</span>

@@ -24,7 +24,7 @@
       <div class="container">
         <a class="visually-hidden visually-hidden-focusable skip-link" href="#main">Перейти к основному контенту</a>
         <nav class="main-menu">
-          <a  class="main-header__logo" href="index.html"><img src="img/logo.svg" alt="Логотип сайта магазина мороженого «Глэйси». Переход на главную страницу" width="154" height="64"></a>
+          <a class="main-header__logo" href="index.html"><img src="img/logo.svg" alt="Логотип сайта магазина мороженого «Глэйси». Переход на главную страницу" width="154" height="64"></a>
           <ul class="main-menu__list" aria-label="главное меню">
             <li class="main-menu__item">
               <a class="main-menu__link main-menu__link--current" href="#"  aria-label="текущий пункт меню каталог" aria-haspopup="true">Каталог</a>
@@ -50,7 +50,7 @@
               <form class="search-form dropdown" id="search-form" action="https://echo.htmlacademy.ru" method="get">
                 <label class="visually-hidden" for="search-field">Поле поиска</label>
                 <input class="search-form__input input" type="search" name="search" id="search-field" placeholder="Что ищем?" required>
-                <button type="submit" class="visually-hidden visually-hidden-focusable button search-form__button">Найти</button>
+                <button class="visually-hidden visually-hidden-focusable button search-form__button" type="submit">Найти</button>
               </form>
             </li>
             <li class="user-menu__item">
@@ -69,10 +69,10 @@
                   <input class="login-form__input input" type="password" name="password" id="password-field" placeholder="Пароль" required>
                 </div>
                 <div class="login-form__row">
-                  <button type="submit" class="button login-form__button">Войти</button>
+                  <button class="button login-form__button" type="submit">Войти</button>
                   <p class="login-form__account">
-                    <a href="#" class="link-dark">Забыли пароль?</a>
-                    <a href="#" class="link-dark">Новая регистрация</a>
+                    <a class="link-dark" href="#">Забыли пароль?</a>
+                    <a class="link-dark" href="#">Новая регистрация</a>
                   </p>
                 </div>
               </form>
