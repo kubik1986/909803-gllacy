@@ -121,7 +121,7 @@ a {
   z-index: 100;
 
   display: block;
-  padding: 10px 17px;
+  padding: 10px 15px;
 
   font-size: 14px;
   line-height: 20px;
@@ -130,14 +130,14 @@ a {
 
   border-radius: 20px / 50%;
   background-color: #d07058;
-  box-shadow: 0 1px 10px 0 rgba(0, 0, 0, 0.1);
+  box-shadow: 0 3px 5px 0 rgba(0, 0, 0, 0.3);
 }
 
 /* general button styles */
 .button {
   display: inline-block;
   vertical-align: middle;
-  padding: 10px 17px;
+  padding: 10px 20px;
 
   font-size: 18px;
   line-height: 24px;
@@ -370,13 +370,13 @@ a {
   right: auto;
 
   padding: 4px 0;
-  min-width: 143px;
+  width: 145px;
 }
 
 .submenu__link {
   display: block;
 
-  padding: 7px 20px 8px;
+  padding: 8px 20px;
 
   font-size: 14px;
   line-height: 16px;
@@ -418,16 +418,18 @@ a {
 
 .user-menu {
   display: flex;
+  flex-wrap: wrap;
   justify-content: flex-end;
 
   margin-top: 23px;
   margin-left: auto;
-  width: 350px;
+  width: 360px;
 }
 
 .user-menu__item {
   position: relative;
 
+  margin-bottom: 10px;
   margin-left: 10px;
 
   border-radius: 16px / 50%;
@@ -449,7 +451,7 @@ a {
   position: relative;
 
   display: block;
-  padding: 8px 17px 8px 44px;
+  padding: 8px 16px 8px 45px;
   min-height: 32px;
 
   font-size: 14px;
@@ -506,7 +508,7 @@ a {
 
 .search-form {
   padding: 20px 15px;
-  min-width: 340px;
+  width: 340px;
 }
 
 .search-form__input {
@@ -523,8 +525,8 @@ a {
 }
 
 .login-form {
-  padding: 20px 18px;
-  width: 277px;
+  padding: 20px;
+  width: 280px;
 }
 
 .login-form__row:not(:last-child) {
@@ -561,8 +563,6 @@ a {
 }
 
 .basket-form__table {
-  width: 100%;
-
   font-size: 13px;
   line-height: 16px;
   font-weight: 400;
@@ -572,32 +572,33 @@ a {
 }
 
 .basket-form__table td {
+  padding: 8px 14px 17px 0;
+
   vertical-align: top;
 }
 
-.basket-form__td-delete {
-  padding: 10px 14px 17px 0;
-  width: 4.9%;
+.basket-form__table .basket-form__td-delete {
+  padding-top: 10px;
+  width: 25px;
 }
 
-.basket-form__td-photo {
-  padding: 0 14px 17px 0;
-  width: 9.2%;
+.basket-form__table .basket-form__td-photo {
+  padding-top: 0;
+  width: 45px;
 }
 
-.basket-form__td-product {
-  padding: 8px 30px 17px 0;
-  width: 48.4%;
+.basket-form__table .basket-form__td-product {
+  padding-right: 30px;
+  width: 250px;
 }
 
-.basket-form__td-price {
-  padding: 8px 14px 17px 0;
-  width: 24%;
+.basket-form__table .basket-form__td-price {
+  width: 120px;
 }
 
-.basket-form__td-subtotal {
-  padding: 8px 0 17px;
-  width: 13.5%;
+.basket-form__table .basket-form__td-subtotal {
+  padding-right: 0;
+  width: 70px;
 }
 
 .basket-form__btn-delete {
@@ -613,24 +614,20 @@ a {
   color: #999999;
 }
 
-.basket-form__total {
+.basket-form__table .basket-form__total {
   font-size: 15px;
   line-height: 18px;
   font-weight: 700;
   text-align: right;
 
-  padding: 15px 0 13px;
+  padding: 15px 0;
   border-top: 1px solid #cacac7;
-}
-
-.basket-form__button {
-  padding: 10px 15px;
 }
 
 /* header contacts */
 .main-header__contacts {
   position: absolute;
-  top: 73px;
+  top: calc(100% - 25px);
   right: 27px;
   z-index: 10;
 
@@ -657,12 +654,12 @@ a {
 .slider {
   position: relative;
 
-  margin-bottom: 41px;
+  margin-bottom: 40px;
 }
 
 .slider__controls {
   position: absolute;
-  top: 563px;
+  top: 565px;
   left: 0;
   z-index: 1;
 
@@ -704,7 +701,7 @@ a {
 .slider__list {
   margin: 0;
   padding: 0;
-  height: 606px;
+  height: 605px;
 
   list-style: none;
 }
@@ -725,7 +722,7 @@ a {
 }
 
 .slider__title {
-  margin-bottom: 31px;
+  margin-bottom: 30px;
   width: 675px;
 
   font-size: 60px;
@@ -746,7 +743,7 @@ a {
 }
 
 .slider__button {
-  padding: 9px 41px 11px;
+  padding: 10px 40px;
 
   font-size: 32px;
   line-height: 44px;
@@ -770,8 +767,8 @@ a {
   display: flex;
   flex-direction: column;
 
-  margin-bottom: 34px;
-  padding: 16px 20px 23px;
+  margin-bottom: 35px;
+  padding: 16px 20px 25px;
   width: 560px;
 
   font-weight: 700;
@@ -802,7 +799,7 @@ a {
 
 .promo__description {
   margin: 0;
-  margin-bottom: 44px;
+  margin-bottom: 45px;
 
   font-size: 18px;
   line-height: 22px;
@@ -812,13 +809,12 @@ a {
   align-self: flex-end;
 
   margin-top: auto;
-  padding: 11px 22px;
 }
 
 /* advantages */
 .advantages {
   margin-bottom: 40px;
-  padding: 25px 20px 23px;
+  padding: 25px 20px;
 
   font-weight: 500;
   color: #323232;
@@ -851,7 +847,7 @@ a {
   position: relative;
 
   margin-top: 22px;
-  padding-left: 56px;
+  padding-left: 55px;
   width: 540px;
 
   font-size: 16px;
@@ -945,7 +941,7 @@ a {
   flex-direction: column;
   justify-content: space-between;
 
-  padding: 29px 21px 35px;
+  padding: 30px 20px 35px;
   width: 550px;
 
   border-radius: 10px;
@@ -954,7 +950,7 @@ a {
 
 .subscription__title {
   margin: 0;
-  margin-bottom: 36px;
+  margin-bottom: 35px;
 }
 
 .subscription__form {
@@ -968,10 +964,6 @@ a {
   width: auto;
 }
 
-.subscription__button {
-  padding: 9px 18px 11px;
-}
-
 /* contacts */
 .contacts {
   position: relative;
@@ -980,7 +972,7 @@ a {
   justify-content: flex-end;
   align-items: center;
 
-  padding: 62px 27px;
+  padding: 60px 27px;
   min-height: 430px;
 }
 
@@ -1002,7 +994,7 @@ a {
   display: flex;
   flex-direction: column;
 
-  padding: 31px 25px;
+  padding: 30px 25px;
   width: 302px;
 
   color: #323232;
@@ -1048,7 +1040,7 @@ a {
 
 /* main footer */
 .main-footer {
-  padding-bottom: 20px;
+  padding-bottom: 15px;
 }
 
 .main-footer .container {
@@ -1126,7 +1118,7 @@ a {
   align-content: flex-start;
 
   margin: 0;
-  margin-top: 34px;
+  margin-top: 35px;
   padding: 0;
   width: 400px;
 
@@ -1139,7 +1131,7 @@ a {
 
 .footer-menu__item {
   margin-bottom: 5px;
-  margin-right: 13px;
+  margin-right: 15px;
   min-width: 130px;
 }
 
@@ -1169,14 +1161,12 @@ a {
 .footer-copyright__logo {
   display: block;
   margin-bottom: 4px;
-  margin-left: 2px;
   width: 108px;
   height: 39px;
 }
 
 .footer-copyright__developer {
   margin: 0;
-  margin-top: 0px;
 
   font-size: 12px;
   line-height: 18px;
@@ -1204,8 +1194,8 @@ a {
 .modal-feedback {
   position: relative;
 
-  padding: 16px 26px 27px 24px;
-  width: 478px;
+  padding: 16px 25px 25px;
+  width: 480px;
 
   color: #323232;
 
@@ -1224,7 +1214,7 @@ a {
 
 .feedback-form__input {
   margin-bottom: 20px;
-  width: 267px;
+  width: 265px;
 }
 
 .feedback-form__textarea {
@@ -1238,25 +1228,27 @@ a {
 .feedback-form__button {
   display: block;
   margin-left: auto;
-  padding: 10px 24px;
+  padding: 10px 25px;
 }
 
 .modal-feedback__close-button {
   position: absolute;
-  top: 17px;
-  right: 16px;
+  top: 18px;
+  right: 18px;
 
   width: 18px;
-  height: 17px;
+  height: 18px;
 
   border: none;
   background: #f8f7f4 url("../img/cross-big.svg");
+  background-repeat: no-repeat;
   cursor: pointer;
 }
 
 /* breadcrumbs */
 .breadcrumbs {
   display: flex;
+  flex-wrap: wrap;
 
   margin: 0;
   margin-bottom: 4px;
@@ -1272,8 +1264,8 @@ a {
 }
 
 .breadcrumbs__item:not(:last-child)::after {
-  margin-left: 9px;
-  margin-right: 6px;
+  margin-left: 7px;
+  margin-right: 7px;
   content: "»";
 }
 
@@ -1510,6 +1502,7 @@ a {
 .filters-form {
   display: flex;
   flex-wrap: wrap;
+  align-items: flex-end;
 }
 
 .filters-form__filter {
@@ -1537,7 +1530,6 @@ a {
 
 .filters-form__legend--price {
   float: left;
-  margin-left: 15px;
   margin-right: 4px;
 }
 
@@ -1557,9 +1549,10 @@ a {
 
 .filters-form__field {
   display: flex;
+  flex-wrap: wrap;
 
   padding: 9px 16px 7px;
-  height: 37px;
+  min-height: 37px;
 
   border-radius: 18px / 50%;
   background-color: rgba(255, 255, 255, 0.2);
@@ -1567,11 +1560,11 @@ a {
 
 .filters-form__field--select {
   padding: 8px 16px;
-  width: 194px;
+  width: 195px;
 
   background-image: url("../img/select-arrow-light.svg");
   background-repeat: no-repeat;
-  background-position: 168px center;
+  background-position: 170px center;
 
   -webkit-appearance: none;
   -moz-appearance: none;
@@ -1637,7 +1630,7 @@ a {
 }
 
 .filters-form__field--slider {
-  padding: 7px 0 8px;
+  padding: 7px 0;
 }
 
 .slider-contoller {
@@ -1698,11 +1691,11 @@ a {
 }
 
 .slider-contoller__grip--min:hover {
-  left: 22px;
+  transform: translateX(-1px);
 }
 
 .slider-contoller__grip--max:hover {
-  right: 54px;
+  transform: translateX(1px);
 }
 
 .filters-form__option {
@@ -1782,8 +1775,8 @@ input:disabled + .filters-form__label::before {
 }
 
 .filters-form__button {
-  margin-top: 22px;
-  padding: 10px 28px 10px 31px;
+  margin-bottom: 15px;
+  padding: 10px 30px;
   height: 37px;
 
   font-size: 16px;
