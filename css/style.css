@@ -1677,7 +1677,7 @@ a {
 }
 
 .slider-contoller__grip--max {
-  right: 55px;
+  left: 121px;
 }
 
 .slider-contoller__grip:hover {
@@ -1688,14 +1688,8 @@ a {
 
   border-width: 9px;
   box-shadow: 0 3px 0 0 #ababab;
-}
 
-.slider-contoller__grip--min:hover {
   transform: translateX(-1px);
-}
-
-.slider-contoller__grip--max:hover {
-  transform: translateX(1px);
 }
 
 .filters-form__option {
