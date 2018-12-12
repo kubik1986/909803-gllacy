@@ -994,7 +994,7 @@ a {
   display: flex;
   flex-direction: column;
 
-  padding: 30px 25px;
+  padding: 25px 25px 30px;
   width: 302px;
 
   color: #323232;
