@@ -1,4 +1,18 @@
+/* fix of bug with moving fixed background image in IE */
+@media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
+  html {
+    overflow: hidden;
+    height: 100%;
+  }
+  body {
+    overflow: auto;
+    height: 100%;
+  }
+}
+
 body {
+  position: relative;
+
   margin: 0;
   padding: 0;
 
@@ -731,6 +745,29 @@ a {
   align-items: center;
 
   height: 100%;
+}
+
+.slider__item::before {
+  position: fixed;
+  top: -1000px;
+  left: 0;
+  z-index: -1;
+
+  width: 100vw;
+  height: 500vh;
+  content: "";
+}
+
+.slider__item--green::before {
+  background-color: inherit;
+}
+
+.slider__item--blue::before {
+  background-color: #8996a6;
+}
+
+.slider__item--brown::before {
+  background-color: #9d8b84;
 }
 
 .slider__item--current {
