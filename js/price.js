@@ -32,4 +32,4 @@ var addPriceFieldHandler = function(priceInput) {
 
 for (var i = 0; i < priceInputs.length; i++) {
   addPriceFieldHandler(priceInputs[i]);
-}
+};
