@@ -246,12 +246,28 @@ a {
 }
 
 /* main header */
+.main-header::before {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+
+  height: 655px;
+  content: "";
+
+  background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0.2), transparent);
+}
+
 .main-header--index {
   position: absolute;
   top: 0;
   left: 0;
   right: 0;
   z-index: 10;
+}
+
+.main-header--index::before {
+  display: none;
 }
 
 /* navigation */
