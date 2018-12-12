@@ -754,7 +754,7 @@ a {
   z-index: -1;
 
   width: 100vw;
-  height: 500vh;
+  height: 100vh;
   content: "";
 }
 
