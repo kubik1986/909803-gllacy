@@ -749,7 +749,7 @@ a {
 
 .slider__item::before {
   position: fixed;
-  top: -1000px;
+  top: 0;
   left: 0;
   z-index: -1;
 
