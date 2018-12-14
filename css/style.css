@@ -759,7 +759,7 @@ a {
 }
 
 .slider__item--green::before {
-  background-color: inherit;
+  background-color: #849d8f;
 }
 
 .slider__item--blue::before {
@@ -1241,6 +1241,10 @@ a {
   height: 100vh;
 
   background-color: rgba(0, 0, 0, 0.3);
+}
+
+.modal-overlay--active {
+  display: flex;
 }
 
 /* modal popup */

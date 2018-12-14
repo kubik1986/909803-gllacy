@@ -3,7 +3,8 @@ ymaps.ready(init);
 function init(){
   var myMap = new ymaps.Map('map', {
     center: [59.93928755, 30.32950326],
-    zoom: 16
+    zoom: 16,
+    controls: ['zoomControl', 'fullscreenControl']
   });
   myMap.behaviors.disable(['scrollZoom']);
 
