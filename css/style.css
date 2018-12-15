@@ -1100,6 +1100,24 @@ a {
   display: flex;
 }
 
+.main-footer .container::before {
+  position: absolute;
+  top: 0;
+  left: 0;
+
+  padding: 0 27px;
+  width: 100%;
+  height: 1px;
+  content: "";
+
+  background-color: rgba(255, 255, 255, 0.3);
+  background-clip: content-box;
+}
+
+.main-footer--index .container::before {
+  display: none;
+}
+
 .social-buttons {
   display: flex;
   flex-wrap: wrap;
@@ -1108,7 +1126,7 @@ a {
   margin: 40px 70px 0 0;
   padding: 0;
   padding-left: 5px;
-  width: 350px;
+  width: 330px;
 
   list-style: none;
 }
@@ -1184,8 +1202,9 @@ a {
 
 .footer-menu__item {
   margin-bottom: 5px;
-  margin-right: 15px;
-  min-width: 130px;
+  margin-right: 7px;
+  padding-left: 22px;
+  min-width: 135px;
 }
 
 .link--favorite {
@@ -1467,7 +1486,6 @@ a {
   margin: 48px 13px 0;
   padding: 0 0 30px;
 
-  border-bottom: 1px solid rgba(255, 255, 255, 0.3);
   list-style: none;
 }
 
