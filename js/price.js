@@ -12,9 +12,6 @@ var resize = function(input) {
 
 var addPriceFieldHandler = function(priceInput) {
   priceInput.addEventListener('input', function(evt) {
-    if (priceInput.value) {
-      priceInput.value = parseInt(priceInput.value);
-    }
     resize(this);
   });
   priceInput.addEventListener('change', function(evt) {
@@ -26,13 +23,15 @@ var addPriceFieldHandler = function(priceInput) {
       priceInput.value = maxPrice;
       resize(this);
     }
-    if (evt.target === minPriceField && parseInt(maxPriceField.value) < parseInt(minPriceField.value)) {
-      maxPriceField.value = minPriceField.value;
-      resize(maxPriceField);
-    }
-    if (evt.target === maxPriceField && parseInt(maxPriceField.value) < parseInt(minPriceField.value)) {
-      minPriceField.value = maxPriceField.value;
-      resize(minPriceField);
+    if (parseInt(maxPriceField.value) < parseInt(minPriceField.value)) {
+      if (evt.target === minPriceField) {
+        maxPriceField.value = minPriceField.value;
+        resize(maxPriceField);
+      }
+      if (evt.target === maxPriceField) {
+        minPriceField.value = maxPriceField.value;
+        resize(minPriceField);
+      }
     }
   });
 };
