@@ -11,8 +11,10 @@ var resize = function(input) {
 };
 
 var addPriceFieldHandler = function(priceInput) {
-  priceInput.addEventListener('input', function() {
-    priceInput.value = parseInt(priceInput.value);
+  priceInput.addEventListener('input', function(evt) {
+    if (priceInput.value) {
+      priceInput.value = parseInt(priceInput.value);
+    }
     resize(this);
   });
   priceInput.addEventListener('change', function(evt) {
