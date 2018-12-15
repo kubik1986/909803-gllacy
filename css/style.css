@@ -308,6 +308,7 @@ a {
   left: 0;
   right: 0;
 
+  min-width: 1200px;
   height: 655px;
   content: "";
 
