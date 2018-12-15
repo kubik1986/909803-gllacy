@@ -791,12 +791,12 @@ a {
 
 .slider__item::before {
   position: fixed;
-  top: 0;
+  top: -25vh;
   left: 0;
   z-index: -1;
 
   width: 100vw;
-  height: 100vh;
+  height: 150vh;
   content: "";
 }
 
