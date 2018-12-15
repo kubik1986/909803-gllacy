@@ -10,6 +10,44 @@
   }
 }
 
+@keyframes shadow-run {
+  0%, 100% {
+    border-color: transparent;
+    box-shadow: 0 0 20px 0 #ed654b;
+  }
+  20% {
+    border-color: transparent;
+    box-shadow: 0 5px 20px 0 #ed654b;
+  }
+  40% {
+    border-color: transparent;
+    box-shadow: 5px 0 20px 0 #e94626;
+  }
+  60% {
+    border-color: transparent;
+    box-shadow: 0 -5px 20px 0 #e73715;
+  }
+  80% {
+    border-color: transparent;
+    box-shadow: -5px 0 20px 0 #d92704;
+  }
+}
+
+@keyframes growing-spin {
+  0% {
+    opacity: 0;
+    transform: scale(0) rotate(0);
+  }
+  80% {
+    opacity: 0.8;
+    transform: scale(1.2) rotate(-360deg);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1) rotate(-360deg);
+  }
+}
+
 body {
   position: relative;
 
@@ -257,6 +295,10 @@ a {
 :-ms-input-placeholder { /* IE 10+ */
   font-weight: 400;
   color: #999999;
+}
+
+.input--error {
+  animation: shadow-run 0.5s;
 }
 
 /* main header */
@@ -1277,6 +1319,10 @@ a {
 
   border-radius: 15px;
   background-color: #f8f7f4;
+}
+
+.modal-overlay--active .modal-feedback {
+  animation: growing-spin 0.6s;
 }
 
 .modal-feedback__title {
