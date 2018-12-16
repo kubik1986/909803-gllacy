@@ -28,32 +28,28 @@ var slides = document.querySelectorAll('.slider__item');
 var currentToggle = document.querySelector('.slider__toggle--current');
 var currentSlide = document.querySelector('.slider__item--current');
 
-var addToggledHandler = function(toggle, slide) {
+var addToggledHandler = function(toggle, slide, index) {
   toggle.addEventListener('click', function() {
     if (!toggle.classList.contains('slider__toggle--current')) {
       currentToggle.classList.remove('slider__toggle--current');
       currentToggle.removeAttribute('aria-label');
       toggle.classList.add('slider__toggle--current');
-      for (var i = 0; i < sliderToggles.length; i++) {
-        if (toggle === sliderToggles[i]) {
-          toggle.setAttribute('aria-label', 'Текущий слайд ' + (i+1));
-        }
-      }
+      toggle.setAttribute('aria-label', 'Текущий слайд ' + (index+1));
+    }
       currentToggle = toggle;
       currentSlide.classList.remove('slider__item--current');
       slide.classList.add('slider__item--current');
       currentSlide = slide;
-    }
   });
 };
 
 for (var i = 0; i < sliderToggles.length; i++) {
-  addToggledHandler(sliderToggles[i], slides[i]);
+  addToggledHandler(sliderToggles[i], slides[i], i);
 }
 
 // Feedback pop-up
 var modalOverlay = document.querySelector('.modal-overlay');
-var modalPopup = document.querySelector('.modal-feedback');
+var modalPopup = modalOverlay.querySelector('.modal-feedback');
 var modalForm = modalPopup.querySelector('.feedback-form');
 var modalOpenBtn = document.querySelector('.contacts__button');
 var modalCloseBtn = modalPopup.querySelector('.modal-feedback__close-button');
@@ -61,6 +57,10 @@ var modalInputName = modalForm.querySelector('input[type="text"]');
 var modalInputEmail = modalForm.querySelector('input[type="email"]');
 var modalInputMsg = modalForm.querySelector('textarea');
 var fields = modalForm.querySelectorAll('.input');
+var keys = {
+  Tab: 9,
+  Esc: 27
+};
 
 var isStorageSupport = true;
 var storageName = "";
@@ -98,7 +98,7 @@ modalOpenBtn.addEventListener('click', function(evt) {
     modalInputName.focus();
   }
   window.addEventListener("keydown", function (evtEsc) {
-    if (evtEsc.keyCode === 27) {
+    if (evtEsc.keyCode === keys.Esc) {
       evtEsc.preventDefault();
       modalOverlay.classList.remove('modal-overlay--active');
       modalOpenBtn.focus();
@@ -113,14 +113,14 @@ modalCloseBtn.addEventListener('click', function(evt) {
 });
 
 modalCloseBtn.addEventListener('keydown', function(evt) {
-  if (evt.keyCode === 9 && !evt.shiftKey) {
+  if (evt.keyCode === keys.Tab && !evt.shiftKey) {
     evt.preventDefault();
     modalInputName.focus();
   }
 });
 
 modalInputName.addEventListener('keydown', function(evt) {
-  if (evt.keyCode === 9 && evt.shiftKey) {
+  if (evt.keyCode === keys.Tab && evt.shiftKey) {
     evt.preventDefault();
     modalCloseBtn.focus();
   }
