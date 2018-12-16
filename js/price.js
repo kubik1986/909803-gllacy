@@ -76,6 +76,9 @@ var updateGrips = function(targetField) { //updates grips positions after fields
 
 var addPriceFieldHandler = function(priceInput) {
   priceInput.addEventListener('input', function(evt) {
+    if (priceInput.value) {
+      priceInput.value = parseInt(priceInput.value); // removes leading zeros (00125 ->  125)
+    }
     resize(this);
     updateGrips(evt.target);
   });
