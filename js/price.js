@@ -3,11 +3,12 @@ var priceInputs = document.querySelectorAll('.filters-form__price');
 var minPriceField = document.querySelector('#min-price-field');
 var maxPriceField = document.querySelector('#max-price-field');
 var minPrice = parseInt(minPriceField.getAttribute('min'));
-var maxPrice = parseInt(minPriceField.getAttribute('max'));
+var maxPrice = parseInt(maxPriceField.getAttribute('max'));
 var averageCharWidth = 8;
+var pixelCorrection = 2;
 
 var resize = function(input) {
-  input.style.width = ((input.value.length) * averageCharWidth) + 'px';
+  input.style.width = (input.value.length * averageCharWidth + pixelCorrection) + 'px';
 };
 
 var addPriceFieldHandler = function(priceInput) {
