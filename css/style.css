@@ -1803,7 +1803,8 @@ a {
   left: 121px;
 }
 
-.slider-contoller__grip:hover {
+.slider-contoller__grip:hover,
+.slider-contoller__grip--picked-up {
   top: 0;
 
   width: 22px;
