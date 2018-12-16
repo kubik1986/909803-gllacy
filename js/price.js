@@ -144,7 +144,6 @@ updateGrips(minPriceField); //initialization
 for (var i=0; i < priceInputs.length; i++) {
   resize(priceInputs[i]);
 }
-updateGrips(minPriceField);
 
 for (var i = 0; i < priceInputs.length; i++) {
   addPriceFieldHandler(priceInputs[i]);
