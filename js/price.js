@@ -2,8 +2,8 @@
 var priceInputs = document.querySelectorAll('.filters-form__price');
 var minPriceField = document.querySelector('#min-price-field');
 var maxPriceField = document.querySelector('#max-price-field');
-var minPrice = parseInt(minPriceField.getAttribute('min'));
-var maxPrice = parseInt(maxPriceField.getAttribute('max'));
+var minPrice = +minPriceField.getAttribute('min');
+var maxPrice = +maxPriceField.getAttribute('max');
 var averageCharWidth = 8;
 var pixelCorrection = 2;
 
@@ -53,9 +53,9 @@ var checkGripPosition = function(grip) { //check grip's position and change it w
 }
 
 var updateGrips = function(targetField) { //updates grips positions after fields changing and while mouse moving
-  gripMinPosition = (parseInt(minPriceField.value) - minPrice) / costPerPixel;
+  gripMinPosition = (+minPriceField.value - minPrice) / costPerPixel;
   checkGripPosition(gripMin);
-  gripMaxPosition = (parseInt(maxPriceField.value) - minPrice) / costPerPixel;
+  gripMaxPosition = (+maxPriceField.value - minPrice) / costPerPixel;
   checkGripPosition(gripMax);
   var delta = gripWidth - (gripMaxPosition - gripMinPosition);
   if (delta > 0) {
@@ -76,30 +76,27 @@ var updateGrips = function(targetField) { //updates grips positions after fields
 
 var addPriceFieldHandler = function(priceInput) {
   priceInput.addEventListener('input', function(evt) {
-    if (priceInput.value) {
-      priceInput.value = parseInt(priceInput.value); // removes leading zeros (00125 ->  125)
-    }
     resize(this);
     updateGrips(evt.target);
   });
   priceInput.addEventListener('change', function(evt) {
-    if (parseInt(priceInput.value) < minPrice || priceInput.value == '') {
+    if (+priceInput.value < minPrice || priceInput.value == '') {
       priceInput.value = minPrice;
-      resize(this);
     }
-    if (parseInt(priceInput.value) > maxPrice) {
+    if (+priceInput.value > maxPrice) {
       priceInput.value = maxPrice;
-      resize(this);
     }
-    if (parseInt(maxPriceField.value) < parseInt(minPriceField.value)) {
+    if (+maxPriceField.value < +minPriceField.value) {
       if (evt.target === minPriceField) {
         maxPriceField.value = minPriceField.value;
-        resize(maxPriceField);
       }
       if (evt.target === maxPriceField) {
         minPriceField.value = maxPriceField.value;
-        resize(minPriceField);
       }
+    }
+    priceInput.value = +priceInput.value; // removes leading zeros (00125 ->  125)
+    for (var i=0; i < priceInputs.length; i++) {
+      resize(priceInputs[i]);
     }
   });
 };
