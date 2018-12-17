@@ -1,6 +1,7 @@
 // Interactive map
 ymaps.ready(init);
-function init(){
+
+function init() {
   var myMap = new ymaps.Map('map', {
     center: [59.93928755, 30.32950326],
     zoom: 16,
@@ -34,12 +35,12 @@ var addToggledHandler = function(toggle, slide, index) {
       currentToggle.classList.remove('slider__toggle--current');
       currentToggle.removeAttribute('aria-label');
       toggle.classList.add('slider__toggle--current');
-      toggle.setAttribute('aria-label', 'Текущий слайд ' + (index+1));
-    }
-      currentToggle = toggle;
+      toggle.setAttribute('aria-label', 'Текущий слайд ' + (index + 1));
       currentSlide.classList.remove('slider__item--current');
       slide.classList.add('slider__item--current');
+      currentToggle = toggle;
       currentSlide = slide;
+    }
   });
 }
 
@@ -63,14 +64,13 @@ var keys = {
 };
 
 var isStorageSupport = true;
-var storageName = "";
-var storageEmail = "";
+var storageName = '';
+var storageEmail = '';
 
 try {
   storageName = localStorage.getItem('name');
   storageEmail = localStorage.getItem('email');
-}
-catch (err) {
+} catch (err) {
   isStorageSupport = false;
 }
 
@@ -93,11 +93,10 @@ modalOpenBtn.addEventListener('click', function(evt) {
     modalInputName.value = storageName;
     modalInputEmail.value = storageEmail;
     modalInputMsg.focus();
-  }
-  else {
+  } else {
     modalInputName.focus();
   }
-  window.addEventListener("keydown", function(evtEsc) {
+  window.addEventListener('keydown', function(evtEsc) {
     if (evtEsc.keyCode === keys.Esc) {
       evtEsc.preventDefault();
       modalOverlay.classList.remove('modal-overlay--active');
@@ -138,7 +137,7 @@ modalForm.addEventListener('submit', function(evt) {
       return;
     }
   }
-  if(isStorageSupport) {
+  if (isStorageSupport) {
     localStorage.setItem('name', modalInputName.value);
     localStorage.setItem('email', modalInputEmail.value);
   }
