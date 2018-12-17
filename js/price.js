@@ -4,8 +4,8 @@ var minPriceField = document.querySelector('#min-price-field');
 var maxPriceField = document.querySelector('#max-price-field');
 var minPrice = +minPriceField.getAttribute('min');
 var maxPrice = +maxPriceField.getAttribute('max');
-var averageCharWidth = 8;
-var pixelCorrection = 2;
+var averageCharWidth = 8; //px
+var pixelCorrection = 2; //px
 
 var grips = document.querySelectorAll('.slider-contoller__grip');
 var gripMin = document.querySelector('.slider-contoller__grip--min');
@@ -21,16 +21,16 @@ var sliderBar = document.querySelector('.slider-contoller__current-range');
 var sliderBarMin = 0;
 var sliderBarMax = 0;
 
-var resize = function(input) { //changes inputs width
-  input.style.width = (input.value.length * averageCharWidth + pixelCorrection) + 'px';
+var resizeInputs = function() { //changes inputs width
+  for (var i=0; i < priceInputs.length; i++) {
+    priceInputs[i].style.width = (priceInputs[i].value.length * averageCharWidth + pixelCorrection) + 'px';
+  }
 };
 
 var updateFields = function () { //updates inputs value while grip's moving
   minPriceField.value = Math.round(minPrice + gripMinPosition * costPerPixel);
   maxPriceField.value = Math.round(minPrice + gripMaxPosition * costPerPixel);
-  for (var i=0; i < priceInputs.length; i++) {
-    resize(priceInputs[i]);
-  }
+  resizeInputs();
 };
 
 var checkGripPosition = function(grip) { //check grip's position and change it when grip is outside it's position range
@@ -76,7 +76,7 @@ var updateGrips = function(targetField) { //updates grips positions after fields
 
 var addPriceFieldHandler = function(priceInput) {
   priceInput.addEventListener('input', function(evt) {
-    resize(this);
+    resizeInputs();
     updateGrips(evt.target);
   });
   priceInput.addEventListener('change', function(evt) {
@@ -95,9 +95,7 @@ var addPriceFieldHandler = function(priceInput) {
       }
     }
     priceInput.value = +priceInput.value; // removes leading zeros (00125 ->  125)
-    for (var i=0; i < priceInputs.length; i++) {
-      resize(priceInputs[i]);
-    }
+    resizeInputs();
   });
 };
 
@@ -107,7 +105,6 @@ var addGripHandler = function(grip) {
     var gripLeftCoord = grip.getBoundingClientRect().left + window.pageXOffset;
     var shiftX = evt.pageX - gripLeftCoord - gripGrowingDelta;
     var sliderLeftCoord = sliderController.getBoundingClientRect().left + window.pageXOffset;
-    grip.classList.add('slider-contoller__grip--picked-up');
 
     function moveAt(evtMove) {
       var field = minPriceField;
@@ -132,20 +129,15 @@ var addGripHandler = function(grip) {
     document.onmouseup = function() {
       document.onmousemove = null;
       document.onmouseup = null;
-      grip.classList.remove('slider-contoller__grip--picked-up');
     };
   };
 };
 
 updateGrips(minPriceField); //initialization
-for (var i=0; i < priceInputs.length; i++) {
-  resize(priceInputs[i]);
-}
-
+resizeInputs();
 for (var i = 0; i < priceInputs.length; i++) {
   addPriceFieldHandler(priceInputs[i]);
 }
-
 for (var i=0; i < grips.length; i++) {
   addGripHandler(grips[i]);
 }

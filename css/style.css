@@ -1804,7 +1804,7 @@ a {
 }
 
 .slider-contoller__grip:hover,
-.slider-contoller__grip--picked-up {
+.slider-contoller__grip:active {
   top: 0;
 
   width: 22px;
