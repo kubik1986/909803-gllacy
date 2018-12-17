@@ -10,6 +10,29 @@
   }
 }
 
+@-webkit-keyframes shadow-run {
+  0%, 100% {
+    border-color: transparent;
+    box-shadow: 0 0 20px 0 #ed654b;
+  }
+  20% {
+    border-color: transparent;
+    box-shadow: 0 5px 20px 0 #ed654b;
+  }
+  40% {
+    border-color: transparent;
+    box-shadow: 5px 0 20px 0 #e94626;
+  }
+  60% {
+    border-color: transparent;
+    box-shadow: 0 -5px 20px 0 #e73715;
+  }
+  80% {
+    border-color: transparent;
+    box-shadow: -5px 0 20px 0 #d92704;
+  }
+}
+
 @keyframes shadow-run {
   0%, 100% {
     border-color: transparent;
@@ -33,18 +56,39 @@
   }
 }
 
-@keyframes growing-spin {
+@-webkit-keyframes growing-spin {
   0% {
     opacity: 0;
-    transform: scale(0) rotate(0);
+    -webkit-transform: scale(0) rotate(0);
+            transform: scale(0) rotate(0);
   }
   80% {
     opacity: 1;
-    transform: scale(1.2) rotate(-360deg);
+    -webkit-transform: scale(1.2) rotate(-360deg);
+            transform: scale(1.2) rotate(-360deg);
   }
   100% {
     opacity: 1;
-    transform: scale(1) rotate(-360deg);
+    -webkit-transform: scale(1) rotate(-360deg);
+            transform: scale(1) rotate(-360deg);
+  }
+}
+
+@keyframes growing-spin {
+  0% {
+    opacity: 0;
+    -webkit-transform: scale(0) rotate(0);
+            transform: scale(0) rotate(0);
+  }
+  80% {
+    opacity: 1;
+    -webkit-transform: scale(1.2) rotate(-360deg);
+            transform: scale(1.2) rotate(-360deg);
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: scale(1) rotate(-360deg);
+            transform: scale(1) rotate(-360deg);
   }
 }
 
@@ -298,7 +342,8 @@ a {
 }
 
 .input--error {
-  animation: shadow-run 0.5s;
+  -webkit-animation: shadow-run 0.5s;
+          animation: shadow-run 0.5s;
 }
 
 /* main header */
@@ -1323,7 +1368,8 @@ a {
 }
 
 .modal-overlay--active .modal-feedback {
-  animation: growing-spin 0.6s;
+  -webkit-animation: growing-spin 0.6s;
+          animation: growing-spin 0.6s;
 }
 
 .modal-feedback__title {
@@ -1603,13 +1649,15 @@ a {
 .pagination__dir--prev::after {
   left: 0;
 
-  transform: rotate(-135deg);
+  -webkit-transform: rotate(-135deg);
+          transform: rotate(-135deg);
 }
 
 .pagination__dir--next::after {
   left: 4px;
 
-  transform: rotate(45deg);
+  -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
 }
 
 .pagination__dir--disabled {
@@ -1813,7 +1861,8 @@ a {
   border-width: 9px;
   box-shadow: 0 3px 0 0 #ababab;
 
-  transform: translateX(-1px);
+  -webkit-transform: translateX(-1px);
+          transform: translateX(-1px);
 }
 
 .filters-form__option {
