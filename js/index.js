@@ -20,7 +20,7 @@ function init(){
   });
 
   myMap.geoObjects.add(myPlacemark);
-};
+}
 
 // Slider
 var sliderToggles = document.querySelectorAll('.slider__toggle');
@@ -41,7 +41,7 @@ var addToggledHandler = function(toggle, slide, index) {
       slide.classList.add('slider__item--current');
       currentSlide = slide;
   });
-};
+}
 
 for (var i = 0; i < sliderToggles.length; i++) {
   addToggledHandler(sliderToggles[i], slides[i], i);
@@ -97,7 +97,7 @@ modalOpenBtn.addEventListener('click', function(evt) {
   else {
     modalInputName.focus();
   }
-  window.addEventListener("keydown", function (evtEsc) {
+  window.addEventListener("keydown", function(evtEsc) {
     if (evtEsc.keyCode === keys.Esc) {
       evtEsc.preventDefault();
       modalOverlay.classList.remove('modal-overlay--active');

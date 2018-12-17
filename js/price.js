@@ -22,16 +22,16 @@ var sliderBarMin = 0;
 var sliderBarMax = 0;
 
 var resizeInputs = function() { //changes inputs width
-  for (var i=0; i < priceInputs.length; i++) {
+  for (var i = 0; i < priceInputs.length; i++) {
     priceInputs[i].style.width = (priceInputs[i].value.length * averageCharWidth + pixelCorrection) + 'px';
   }
-};
+}
 
-var updateFields = function () { //updates inputs value while grip's moving
+var updateFields = function() { //updates inputs value while grip's moving
   minPriceField.value = Math.round(minPrice + gripMinPosition * costPerPixel);
   maxPriceField.value = Math.round(minPrice + gripMaxPosition * costPerPixel);
   resizeInputs();
-};
+}
 
 var checkGripPosition = function(grip) { //check grip's position and change it when grip is outside it's position range
   if (grip === gripMin) {
@@ -72,7 +72,7 @@ var updateGrips = function(targetField) { //updates grips positions after fields
   gripMax.style.left = gripMaxPosition + 'px';
   sliderBar.style.marginLeft = sliderBarMin + 'px';
   sliderBar.style.marginRight = (sliderControllerWidth - sliderBarMax) + 'px';
-};
+}
 
 var addPriceFieldHandler = function(priceInput) {
   priceInput.addEventListener('input', function(evt) {
@@ -97,10 +97,10 @@ var addPriceFieldHandler = function(priceInput) {
     priceInput.value = +priceInput.value; // removes leading zeros (00125 ->  125)
     resizeInputs();
   });
-};
+}
 
 var addGripHandler = function(grip) {
-  grip.onmousedown = function (evt) {
+  grip.onmousedown = function(evt) {
     evt.preventDefault();
     var gripLeftCoord = grip.getBoundingClientRect().left + window.pageXOffset;
     var shiftX = evt.pageX - gripLeftCoord - gripGrowingDelta;
@@ -120,24 +120,24 @@ var addGripHandler = function(grip) {
       }
       updateFields();
       updateGrips(field);
-    };
+    }
 
     document.onmousemove = function(evtMove) {
       moveAt(evtMove);
-    };
+    }
 
     document.onmouseup = function() {
       document.onmousemove = null;
       document.onmouseup = null;
-    };
-  };
-};
+    }
+  }
+}
 
 updateGrips(minPriceField); //initialization
 resizeInputs();
 for (var i = 0; i < priceInputs.length; i++) {
   addPriceFieldHandler(priceInputs[i]);
 }
-for (var i=0; i < grips.length; i++) {
+for (var i = 0; i < grips.length; i++) {
   addGripHandler(grips[i]);
 }
