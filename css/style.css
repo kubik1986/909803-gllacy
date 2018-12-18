@@ -661,7 +661,7 @@ a {
 }
 
 .login-form__button {
-  padding: 10px 25px;
+  width: 100px;
 }
 
 .login-form__account {
@@ -885,6 +885,7 @@ a {
 
 .slider__button {
   padding: 10px 40px;
+  max-width: 600px;
 
   font-size: 32px;
   line-height: 44px;
@@ -1096,6 +1097,7 @@ a {
 
 .subscription__form {
   display: flex;
+  align-items: center;
 }
 
 .subscription__input {
@@ -1103,6 +1105,10 @@ a {
 
   margin-right: 10px;
   width: auto;
+}
+
+.subscription__button {
+  max-width: 230px;
 }
 
 /* contacts */
