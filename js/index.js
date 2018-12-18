@@ -59,8 +59,8 @@ var modalInputEmail = modalForm.querySelector('input[type="email"]');
 var modalInputMsg = modalForm.querySelector('textarea');
 var fields = modalForm.querySelectorAll('.input');
 var keys = {
-  Tab: 9,
-  Esc: 27
+  'Tab': 9,
+  'Esc': 27
 };
 
 var isStorageSupport = true;
@@ -97,7 +97,7 @@ modalOpenBtn.addEventListener('click', function(evt) {
     modalInputName.focus();
   }
   window.addEventListener('keydown', function(evtEsc) {
-    if (evtEsc.keyCode === keys.Esc) {
+    if (evtEsc.keyCode === keys['Esc']) {
       evtEsc.preventDefault();
       modalOverlay.classList.remove('modal-overlay--active');
       modalOpenBtn.focus();
@@ -112,14 +112,14 @@ modalCloseBtn.addEventListener('click', function(evt) {
 });
 
 modalCloseBtn.addEventListener('keydown', function(evt) {
-  if (evt.keyCode === keys.Tab && !evt.shiftKey) {
+  if (evt.keyCode === keys['Tab'] && !evt.shiftKey) {
     evt.preventDefault();
     modalInputName.focus();
   }
 });
 
 modalInputName.addEventListener('keydown', function(evt) {
-  if (evt.keyCode === keys.Tab && evt.shiftKey) {
+  if (evt.keyCode === keys['Tab'] && evt.shiftKey) {
     evt.preventDefault();
     modalCloseBtn.focus();
   }
