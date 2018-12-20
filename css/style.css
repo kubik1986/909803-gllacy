@@ -392,6 +392,8 @@ a {
 .main-header__logo {
   margin-top: 9px;
   margin-right: 10px;
+
+  color: #ffffff;
 }
 
 .main-menu__list {
@@ -1336,6 +1338,8 @@ a {
   margin-bottom: 4px;
   width: 108px;
   height: 39px;
+
+  color: #ffffff;
 }
 
 .footer-copyright__developer {
