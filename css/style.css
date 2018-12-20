@@ -719,6 +719,10 @@ a {
   width: 70px;
 }
 
+.basket-form__td-photo img {
+  border-radius: 50%;
+}
+
 .basket-form__btn-delete {
   display: block;
   width: 11px;
