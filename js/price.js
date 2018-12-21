@@ -4,8 +4,8 @@ var minPriceField = document.querySelector('#min-price-field');
 var maxPriceField = document.querySelector('#max-price-field');
 var minPrice = +minPriceField.getAttribute('min');
 var maxPrice = +maxPriceField.getAttribute('max');
-var averageCharWidth = 8; //px
-var pixelCorrection = 2; //px
+var AVERAGE_CHAR_WIDTH = 8; //px
+var PIXEL_CORRECTION = 2; //px
 
 var grips = document.querySelectorAll('.slider-contoller__grip');
 var gripMin = document.querySelector('.slider-contoller__grip--min');
@@ -23,15 +23,15 @@ var sliderBarMax = 0;
 
 var resizeInputs = function() { //changes inputs width
   for (var i = 0; i < priceInputs.length; i++) {
-    priceInputs[i].style.width = (priceInputs[i].value.length * averageCharWidth + pixelCorrection) + 'px';
+    priceInputs[i].style.width = (priceInputs[i].value.length * AVERAGE_CHAR_WIDTH + PIXEL_CORRECTION) + 'px';
   }
-}
+};
 
 var updateFields = function() { //updates inputs value while grip's moving
   minPriceField.value = Math.round(minPrice + gripMinPosition * costPerPixel);
   maxPriceField.value = Math.round(minPrice + gripMaxPosition * costPerPixel);
   resizeInputs();
-}
+};
 
 var checkGripPosition = function(grip) { //check grip's position and change it when grip is outside it's position range
   if (grip === gripMin) {
@@ -50,7 +50,7 @@ var checkGripPosition = function(grip) { //check grip's position and change it w
       gripMaxPosition = gripWidth;
     }
   }
-}
+};
 
 var updateGrips = function(targetField) { //updates grips positions after fields changing and while mouse moving
   gripMinPosition = (+minPriceField.value - minPrice) / costPerPixel;
@@ -72,7 +72,7 @@ var updateGrips = function(targetField) { //updates grips positions after fields
   gripMax.style.left = gripMaxPosition + 'px';
   sliderBar.style.marginLeft = sliderBarMin + 'px';
   sliderBar.style.marginRight = (sliderControllerWidth - sliderBarMax) + 'px';
-}
+};
 
 var addPriceFieldHandler = function(priceInput) {
   priceInput.addEventListener('input', function(evt) {
@@ -97,7 +97,7 @@ var addPriceFieldHandler = function(priceInput) {
     priceInput.value = +priceInput.value; // removes leading zeros (00125 ->  125)
     resizeInputs();
   });
-}
+};
 
 var addGripHandler = function(grip) {
   grip.onmousedown = function(evt) {
@@ -124,14 +124,14 @@ var addGripHandler = function(grip) {
 
     document.onmousemove = function(evtMove) {
       moveAt(evtMove);
-    }
+    };
 
     document.onmouseup = function() {
       document.onmousemove = null;
       document.onmouseup = null;
-    }
-  }
-}
+    };
+  };
+};
 
 updateGrips(minPriceField); //initialization
 resizeInputs();

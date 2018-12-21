@@ -42,7 +42,7 @@ var addToggledHandler = function(toggle, slide, index) {
       currentSlide = slide;
     }
   });
-}
+};
 
 for (var i = 0; i < sliderToggles.length; i++) {
   addToggledHandler(sliderToggles[i], slides[i], i);
@@ -83,7 +83,7 @@ var clearStatus = function() {
       fields[i].removeAttribute('aria-invalid');
     }
   }
-}
+};
 
 modalOpenBtn.addEventListener('click', function(evt) {
   evt.preventDefault();
