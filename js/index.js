@@ -25,9 +25,25 @@ function init() {
 
 // Slider
 var sliderToggles = document.querySelectorAll('.slider__toggle');
-var slides = document.querySelectorAll('.slider__item');
+var sliderList = document.querySelector('.slider__list');
+var slides = sliderList.querySelectorAll('.slider__item');
 var currentToggle = document.querySelector('.slider__toggle--current');
 var currentSlide = document.querySelector('.slider__item--current');
+
+var setSliderMinHeight = function(slides) { //sets general min-height property for slider depending on the maximum height of the slides
+  var maxSlideHeight = 0;
+  for (var i = 0; i < slides.length; i++) {
+    if (!slides[i].classList.contains('slider__item--current')) {
+      slides[i].classList.add('slider__item--current');
+    }
+    if (+slides[i].offsetHeight > maxSlideHeight) {
+      maxSlideHeight = +slides[i].offsetHeight;
+    }
+    slides[i].classList.remove('slider__item--current');
+  }
+  currentSlide.classList.add('slider__item--current');
+  sliderList.style.minHeight = maxSlideHeight + 'px';
+};
 
 var addToggledHandler = function(toggle, slide, index) {
   toggle.addEventListener('click', function() {
@@ -44,6 +60,7 @@ var addToggledHandler = function(toggle, slide, index) {
   });
 };
 
+setSliderMinHeight(slides);
 for (var i = 0; i < sliderToggles.length; i++) {
   addToggledHandler(sliderToggles[i], slides[i], i);
 }
