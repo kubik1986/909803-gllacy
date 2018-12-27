@@ -386,6 +386,11 @@ a {
   color: #999999;
 }
 
+::-ms-input-placeholder { /* Edge */
+  font-weight: 400;
+  color: #999999;
+}
+
 .input--error {
   -webkit-animation: shadow-run 0.5s;
           animation: shadow-run 0.5s;
