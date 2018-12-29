@@ -58,6 +58,9 @@ var addToggledHandler = function(toggle, slide, index) {
       currentSlide = slide;
     }
   });
+  toggle.addEventListener('mouseup', function() {
+    this.blur();
+  });
 };
 
 setSliderMinHeight(slides);

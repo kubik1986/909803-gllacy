@@ -888,6 +888,7 @@ a {
 
 .slider__toggle:active {
   background-color: #ffffff;
+  outline: none;
 }
 
 .slider__toggle--current,
