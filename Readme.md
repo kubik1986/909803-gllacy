@@ -1,12 +1,11 @@
 # Личный проект «Глэйси»
-Ссылка на GitPages: https://kubik1986.github.io/909803-gllacy/
 
 * Студент: [Вячеслав Акулов](https://up.htmlacademy.ru/htmlcss/23/user/909803).
 * Наставник: [Георгий 👨‍🏫 Гусаков](https://htmlacademy.ru/profile/georgegus27).
 
 ---
 
-<a href="https://kubik1986.github.io/909803-gllacy/"><img src="img/gllacy-preview.jpg" alt="Превью сайта "«Глэйси»"></a>
+<a href="https://kubik1986.github.io/909803-gllacy/"><img src="img/gllacy-preview.jpg" alt="Превью сайта «Глэйси»"></a>
 
 ---
 
